@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-05",
+  "title": "Chapter 5 Quiz — Hypergraphs & Symmetry Counting",
+  "questions": [
+    {
+      "id": "q5.1",
+      "question": "How many automorphisms does the $4 \\times 4$ tic-tac-toe hypergraph ($16$ cells, $10$ lines) have?",
+      "options": [
+        { "id": "a", "text": "8" },
+        { "id": "b", "text": "16" },
+        { "id": "c", "text": "32" },
+        { "id": "d", "text": "64" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "It has $32$ automorphisms—four times its $8$ geometric symmetries—because inner row/column swaps like $(2\\;3)$ preserve rows, columns, and both diagonals."
+    },
+    {
+      "id": "q5.2",
+      "question": "What is the order of the automorphism group of the Fano plane ($7$ points, $7$ three-point lines)?",
+      "options": [
+        { "id": "a", "text": "42" },
+        { "id": "b", "text": "84" },
+        { "id": "c", "text": "168" },
+        { "id": "d", "text": "5040" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Choose the images of $3$ non-collinear points in $7 \\cdot 6 \\cdot 4 = 168$ ways; those $3$ base points determine the images of all $7$ points uniquely."
+    },
+    {
+      "id": "q5.3",
+      "question": "How many distinct bracelets (rotations and reflections allowed) have $6$ beads in $2$ colors?",
+      "options": [
+        { "id": "a", "text": "12" },
+        { "id": "b", "text": "13" },
+        { "id": "c", "text": "14" },
+        { "id": "d", "text": "16" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Rotations fix $84$ colorings ($14$ necklaces), and the $6$ reflections fix $3 \\cdot 2^4 + 3 \\cdot 2^3 = 72$, giving $(84 + 72)/12 = 13$ bracelets."
+    },
+    {
+      "id": "q5.4",
+      "question": "Using the cube face formula $(k^6 + 3k^4 + 12k^3 + 8k^2)/24$, how many essentially different ways can you paint the $6$ faces of a cube using $2$ colors?",
+      "options": [
+        { "id": "a", "text": "8" },
+        { "id": "b", "text": "10" },
+        { "id": "c", "text": "12" },
+        { "id": "d", "text": "16" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Evaluating $(2^6 + 3\\cdot 2^4 + 12\\cdot 2^3 + 8\\cdot 2^2)/24 = (64 + 48 + 96 + 32)/24 = 240/24 = 10$."
+    }
+  ]
+}

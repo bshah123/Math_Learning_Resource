@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-15",
+  "title": "Chapter 15 Quiz — Three-Point Problems",
+  "questions": [
+    {
+      "id": "q15.1",
+      "question": "For a triangle with sides $2, 2, \\sqrt{12}$ (angles $30^\\circ, 30^\\circ, 120^\\circ$), what is the minimum possible value of $PA + PB + PC$?",
+      "options": [
+        { "id": "a", "text": "$4$" },
+        { "id": "b", "text": "$2 + \\sqrt{12}$" },
+        { "id": "c", "text": "$\\sqrt{10 + 6\\sqrt{3}}$" },
+        { "id": "d", "text": "$6$" }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Since one angle is $120^\\circ$, the Fermat point coincides with the $120^\\circ$ vertex itself, giving minimal sum $2 + 2 = 4$."
+    },
+    {
+      "id": "q15.2",
+      "question": "What is the probability that $4$ independent uniformly random points on a circle have a convex hull containing the circle's center?",
+      "options": [
+        { "id": "a", "text": "$1/4$" },
+        { "id": "b", "text": "$3/8$" },
+        { "id": "c", "text": "$1/2$" },
+        { "id": "d", "text": "$5/8$" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "They miss the center iff all $4$ lie in a semicircle, which occurs with probability $n/2^{n-1} = 4/8 = 1/2$, so they contain the center with probability $1 - 1/2 = 1/2$."
+    },
+    {
+      "id": "q15.3",
+      "question": "In Snellius–Pothenot resection from landmarks $A, B, C$, when does the observer's position $P$ fail to be uniquely determined?",
+      "options": [
+        { "id": "a", "text": "When $P$ lies on the perpendicular bisector of $AB$" },
+        { "id": "b", "text": "When $P$ lies on the circumcircle through $A, B, C$" },
+        { "id": "c", "text": "When $\\alpha + \\beta = 90^\\circ$" },
+        { "id": "d", "text": "When $P$ is inside $\\triangle ABC$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "On the circumcircle of $A, B, C$ (the danger circle), both subtended-angle circular arcs coincide, leaving infinitely many valid positions."
+    },
+    {
+      "id": "q15.4",
+      "question": "If a geological rock plane has equation $z = -0.1x - 0.1y + 10$, what is $\\tan\\delta$ for its steepest dip angle $\\delta$?",
+      "options": [
+        { "id": "a", "text": "$0.1$" },
+        { "id": "b", "text": "$\\sqrt{2}/10$" },
+        { "id": "c", "text": "$0.2$" },
+        { "id": "d", "text": "$10$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "$\\tan\\delta = \\sqrt{p^2 + q^2} = \\sqrt{(-0.1)^2 + (-0.1)^2} = \\sqrt{2}/10$."
+    }
+  ]
+}

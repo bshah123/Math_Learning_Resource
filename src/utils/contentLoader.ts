@@ -1,0 +1,99 @@
+import { parseFrontmatter, extractHeadings, ParsedMarkdown } from './markdownParser';
+
+const markdownModules = import.meta.glob('/content/**/*.md', { query: '?raw', import: 'default', eager: true });
+const quizModules = import.meta.glob('/content/**/*.json', { eager: true });
+const svgModules = import.meta.glob('/content/**/*.svg', { query: '?raw', import: 'default' });
+
+export function resolveContentPath(lessonPath: string, src: string): string {
+  if (src.startsWith('/content/')) return src;
+  const parts = lessonPath.split('/').slice(0, -1);
+  for (const seg of src.split('/')) {
+    if (seg === '..') parts.pop();
+    else if (seg !== '.' && seg !== '') parts.push(seg);
+  }
+  return parts.join('/');
+}
+
+export async function loadSvg(contentPath: string): Promise<string | null> {
+  const loader = svgModules[contentPath];
+  if (!loader) return null;
+  return (await loader()) as string;
+}
+
+export function getLessonContent(lessonId: string): ParsedMarkdown | null {
+  const targetId = String(lessonId).trim();
+
+  for (const path in markdownModules) {
+    const rawVal = markdownModules[path];
+    const rawText = typeof rawVal === 'string' ? rawVal : (rawVal as any)?.default || '';
+    if (!rawText) continue;
+
+    const { frontmatter, body } = parseFrontmatter(rawText);
+
+    if (String(frontmatter.id).trim() === targetId) {
+      const headings = extractHeadings(body);
+      return {
+        frontmatter,
+        contentHtml: body,
+        headings,
+        rawContent: rawText,
+        path
+      };
+    }
+  }
+
+  for (const path in markdownModules) {
+    const filename = path.split('/').pop() || '';
+    if (filename.startsWith(`${targetId}-`) || filename.startsWith(`${targetId}.`)) {
+      const rawVal = markdownModules[path];
+      const rawText = typeof rawVal === 'string' ? rawVal : (rawVal as any)?.default || '';
+      if (!rawText) continue;
+
+      const { frontmatter, body } = parseFrontmatter(rawText);
+      const headings = extractHeadings(body);
+      return {
+        frontmatter: { ...frontmatter, id: targetId },
+        contentHtml: body,
+        headings,
+        rawContent: rawText,
+        path
+      };
+    }
+  }
+
+  return null;
+}
+
+function normalizeQuiz(raw: any): any {
+  if (!raw || !raw.questions) return raw;
+  if (raw.questions[0]?.options?.[0]?.id) return raw;
+
+  return {
+    ...raw,
+    questions: raw.questions.map((q: any) => {
+      const options = (q.options || []).map((opt: string, idx: number) => ({
+        id: `opt-${idx}`,
+        text: opt
+      }));
+      const correctOptionId =
+        typeof q.correctIndex === 'number'
+          ? `opt-${q.correctIndex}`
+          : q.correctOptionId ?? 'opt-0';
+      return {
+        ...q,
+        options,
+        correctOptionId
+      };
+    })
+  };
+}
+
+export function getChapterQuiz(chapterId: string): any | null {
+  for (const path in quizModules) {
+    if ((path.includes(`/${chapterId}-`) || path.includes(`/${chapterId}/`)) && path.endsWith('quiz.json')) {
+      const raw = (quizModules[path] as any).default || quizModules[path];
+      return normalizeQuiz(raw);
+    }
+  }
+  return null;
+}

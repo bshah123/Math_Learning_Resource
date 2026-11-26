@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-17",
+  "title": "Chapter 17 Quiz — Cross-Topic Math Bridges",
+  "questions": [
+    {
+      "id": "q17.1",
+      "question": "Which two theorems use the exact same $p$-adic valuation $v_p$?",
+      "options": [
+        { "id": "a", "text": "Euler's formula and Ore's theorem" },
+        { "id": "b", "text": "The $p$-adic ultrametric ($\\S 7$) and Legendre's factorial prime-power formula ($\\S 9$)" },
+        { "id": "c", "text": "Hall's matching theorem and Schur's theorem" },
+        { "id": "d", "text": "Ptolemy's inequality and Mantel's theorem" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Both rely on $v_p(n)$: $d_p(x, y) = p^{-v_p(x-y)}$ forms an ultrametric, while $v_p(n!) = (n - s_p(n))/(p-1)$ drives Bertrand's postulate."
+    },
+    {
+      "id": "q17.2",
+      "question": "Which analytic theorem proves Revenue Equivalence across symmetric auction formats ($\\S 12$)?",
+      "options": [
+        { "id": "a", "text": "Jensen's inequality" },
+        { "id": "b", "text": "The Envelope theorem ($\\S 8$)" },
+        { "id": "c", "text": "Descartes's angular defect theorem" },
+        { "id": "d", "text": "Brooks's coloring theorem" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Applying the Envelope theorem to $U(v) = \\max_\\beta (v - \\beta)P(\\text{win} \\mid \\beta)$ gives $U'(v) = v^{n-1}$ independently of the payment rule."
+    },
+    {
+      "id": "q17.3",
+      "question": "What geometric objects share the exact polyhedral shape of the 3D $\\ell_1$ unit ball $|x| + |y| + |z| \\le 1$?",
+      "options": [
+        { "id": "a", "text": "Regular tetrahedra" },
+        { "id": "b", "text": "Regular octahedra ($\\S 16$)" },
+        { "id": "c", "text": "Regular dodecahedra" },
+        { "id": "d", "text": "Truncated octahedra" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "The 3D $\\ell_1$ unit ball has vertices $(\\pm 1, 0, 0), (0, \\pm 1, 0), (0, 0, \\pm 1)$, forming a regular octahedron of volume $4/3$."
+    },
+    {
+      "id": "q17.4",
+      "question": "Which pair of Platonic dihedral angles sum to $180^\\circ$, enabling space-tiling matching the FCC sphere packing voids?",
+      "options": [
+        { "id": "a", "text": "Cube and Dodecahedron" },
+        { "id": "b", "text": "Regular tetrahedron and regular octahedron" },
+        { "id": "c", "text": "Regular tetrahedron and icosahedron" },
+        { "id": "d", "text": "Cube and regular octahedron" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "$\\arccos(1/3) + \\arccos(-1/3) = 70.53^\\circ + 109.47^\\circ = 180^\\circ$, so two tetrahedra and two octahedra fill $360^\\circ$ around every edge."
+    }
+  ]
+}

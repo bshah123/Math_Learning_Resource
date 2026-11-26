@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-02",
+  "title": "Chapter 2 Quiz — Hamiltonian Paths and Cycles",
+  "questions": [
+    {
+      "id": "q2.1",
+      "question": "If $G$ has a Hamiltonian cycle and removing a vertex subset $S$ of size $4$ disconnects $G$, what is the maximum possible number of connected components in $G - S$?",
+      "options": [
+        { "id": "a", "text": "3" },
+        { "id": "b", "text": "4" },
+        { "id": "c", "text": "5" },
+        { "id": "d", "text": "8" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Deleting $|S|$ vertices from a Hamiltonian cycle breaks the cycle into at most $|S| = 4$ arcs covering every remaining vertex, so $G - S$ has at most $4$ components."
+    },
+    {
+      "id": "q2.2",
+      "question": "In Pósa's proof that no closed knight's tour exists on a $4 \\times n$ board, what contradicts the forced alternation between outer rows ($1, 4$) and inner rows ($2, 3$)?",
+      "options": [
+        { "id": "a", "text": "The outer rows have more squares than the inner rows" },
+        { "id": "b", "text": "Every outer square would have to share the same chessboard color, yet outer rows have both colors" },
+        { "id": "c", "text": "Corners have degree 1 on a 4 x n board" },
+        { "id": "d", "text": "A knight cannot move between rows 2 and 3" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Since a knight on an outer row must land on an inner row and both have $2n$ squares, the tour alternates outer-inner. Because knight moves also flip chessboard color, all $2n$ outer squares would share one color."
+    },
+    {
+      "id": "q2.3",
+      "question": "What is the minimum number of edges that guarantees a simple graph on $n = 8$ vertices has a Hamiltonian cycle?",
+      "options": [
+        { "id": "a", "text": "$\\binom{7}{2} + 1 = 22$" },
+        { "id": "b", "text": "$\\binom{7}{2} + 2 = 23$" },
+        { "id": "c", "text": "$\\binom{8}{2} - 2 = 26$" },
+        { "id": "d", "text": "20" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Any graph on $n \\ge 3$ vertices with $\\binom{n-1}{2} + 2 = 23$ edges satisfies Ore's theorem; $K_7$ plus one pendant edge has $22$ edges and no Hamiltonian cycle."
+    },
+    {
+      "id": "q2.4",
+      "question": "Which of the following standard graphs does NOT have a Hamiltonian cycle?",
+      "options": [
+        { "id": "a", "text": "$Q_4$" },
+        { "id": "b", "text": "$P_3 \\times P_4$" },
+        { "id": "c", "text": "The Petersen graph" },
+        { "id": "d", "text": "$K_{5,5}$" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "The Petersen graph has a Hamiltonian path, but no Hamiltonian cycle. $Q_4$, $P_3 \\times P_4$ ($3\\cdot 4$ even), and $K_{5,5}$ are all Hamiltonian."
+    }
+  ]
+}

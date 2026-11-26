@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-04",
+  "title": "Chapter 4 Quiz — Graph Homomorphisms & Trees",
+  "questions": [
+    {
+      "id": "q4.1",
+      "question": "For which pairs $(k, m)$ does a graph homomorphism $C_{2k+1} \\to C_{2m+1}$ exist?",
+      "options": [
+        { "id": "a", "text": "Only when $k = m$" },
+        { "id": "b", "text": "Whenever $k \\le m$" },
+        { "id": "c", "text": "Whenever $k \\ge m$" },
+        { "id": "d", "text": "Whenever $2m + 1$ divides $2k + 1$" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "You can wrap $C_{2k+1}$ around the shorter odd cycle $C_{2m+1}$ and step back and forth when $k \\ge m$; conversely an odd closed walk of length $2k+1$ in $C_{2m+1}$ must contain the cycle of length $2m+1$, forcing $k \\ge m$."
+    },
+    {
+      "id": "q4.2",
+      "question": "What is $\\operatorname{hom}(P_4, C_5)$, the number of homomorphisms from a $4$-vertex path into the $5$-cycle?",
+      "options": [
+        { "id": "a", "text": "10" },
+        { "id": "b", "text": "20" },
+        { "id": "c", "text": "40" },
+        { "id": "d", "text": "80" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "$C_5$ is $2$-regular on $5$ vertices and $P_4$ is a $4$-vertex tree, so $\\operatorname{hom}(P_4, C_5) = 5 \\cdot 2^{4-1} = 5 \\cdot 8 = 40$."
+    },
+    {
+      "id": "q4.3",
+      "question": "How many automorphisms does a double star (two adjacent centers, each attached to $2$ extra leaves) have?",
+      "options": [
+        { "id": "a", "text": "4" },
+        { "id": "b", "text": "8" },
+        { "id": "c", "text": "12" },
+        { "id": "d", "text": "24" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "The Jordan center is the edge joining the two centers ($2$ choices to fix or swap them), and each center's $2$ leaves can be swapped independently ($2! \\cdot 2!$), giving $2 \\cdot 2! \\cdot 2! = 8$."
+    },
+    {
+      "id": "q4.4",
+      "question": "Why does $G \\to H$ imply $\\chi(G) \\le \\chi(H)$?",
+      "options": [
+        { "id": "a", "text": "Because homomorphisms are always surjective" },
+        { "id": "b", "text": "By composition: if $H \\to K_k$ then $G \\to H \\to K_k$" },
+        { "id": "c", "text": "Because $\\deg(v)$ increases under homomorphisms" },
+        { "id": "d", "text": "Because $G$ must be a subgraph of $H$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "A proper $k$-coloring of $H$ is a homomorphism $H \\to K_k$; composing with $G \\to H$ gives a proper $k$-coloring $G \\to K_k$."
+    }
+  ]
+}

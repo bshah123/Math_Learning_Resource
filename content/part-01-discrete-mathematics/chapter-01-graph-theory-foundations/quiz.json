@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-01",
+  "title": "Chapter 1 Quiz — Graph Theory Foundations",
+  "questions": [
+    {
+      "id": "q1.1",
+      "question": "Can a $3$-regular graph on $10$ vertices be bipartite with parts of sizes $4$ and $6$?",
+      "options": [
+        { "id": "a", "text": "Yes, by Hall's Marriage Theorem" },
+        { "id": "b", "text": "No, because edges from the two parts would sum to $12$ and $18$, which must be equal" },
+        { "id": "c", "text": "Yes, as long as it has no triangles" },
+        { "id": "d", "text": "No, because $15 > 10^2/4$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Every edge crosses between the two parts, so summing degrees on each side must yield $|E| = 3\\cdot 4 = 12$ and $|E| = 3\\cdot 6 = 18$, a contradiction."
+    },
+    {
+      "id": "q1.2",
+      "question": "What is the maximum number of edges in a triangle-free simple graph on $9$ vertices?",
+      "options": [
+        { "id": "a", "text": "18" },
+        { "id": "b", "text": "20" },
+        { "id": "c", "text": "21" },
+        { "id": "d", "text": "24" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "By Mantel's theorem, the maximum is $\\lfloor 9^2 / 4 \\rfloor = \\lfloor 81/4 \\rfloor = 20$, attained by $K_{4,5}$."
+    },
+    {
+      "id": "q1.3",
+      "question": "Why is $K_{3,3}$ non-planar even though $E = 9 \\le 3(6) - 6 = 12$?",
+      "options": [
+        { "id": "a", "text": "Because $K_{3,3}$ is $3$-regular" },
+        { "id": "b", "text": "Because $K_{3,3}$ is triangle-free, so planar drawings satisfy $E \\le 2V - 4 = 8 < 9$" },
+        { "id": "c", "text": "Because $K_{3,3}$ has $2$ connected components" },
+        { "id": "d", "text": "Because every vertex has odd degree" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Every face of a triangle-free planar graph requires at least $4$ edges, so $2E \\ge 4F$ with Euler's formula gives $E \\le 2V - 4 = 8$."
+    },
+    {
+      "id": "q1.4",
+      "question": "How many closed walks of length $4$ start and end at vertex $1$ of $K_4$?",
+      "options": [
+        { "id": "a", "text": "6" },
+        { "id": "b", "text": "15" },
+        { "id": "c", "text": "21" },
+        { "id": "d", "text": "84" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "The eigenvalues of $K_4$ are $3, -1, -1, -1$, so $\\operatorname{trace}(A^4) = 3^4 + 3(-1)^4 = 84$. By vertex symmetry, $84/4 = 21$ start at each vertex."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-03",
+  "title": "Chapter 3 Quiz — Bijective Proofs & Double Counting",
+  "questions": [
+    {
+      "id": "q3.1",
+      "question": "How many E/N lattice paths from $(0,0)$ to $(5,5)$ touch or cross the line $y = x + 1$?",
+      "options": [
+        { "id": "a", "text": "$42$" },
+        { "id": "b", "text": "$132$" },
+        { "id": "c", "text": "$210$" },
+        { "id": "d", "text": "$252$" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "By the reflection principle across $y = x + 1$, bad paths biject with all paths to $(4, 6)$, which number $\\binom{10}{4} = 210$ (leaving $C_5 = 252 - 210 = 42$ good paths)."
+    },
+    {
+      "id": "q3.2",
+      "question": "In a ballot count where Alice gets $7$ votes and Bob gets $3$ votes in random order, what is the probability Alice stays strictly ahead throughout?",
+      "options": [
+        { "id": "a", "text": "$2/5$" },
+        { "id": "b", "text": "$3/10$" },
+        { "id": "c", "text": "$4/7$" },
+        { "id": "d", "text": "$1/2$" }
+      ],
+      "correctOptionId": "a",
+      "explanation": "By the ballot theorem, the probability is $(a - b)/(a + b) = (7 - 3)/(7 + 3) = 4/10 = 2/5$."
+    },
+    {
+      "id": "q3.3",
+      "question": "How many labeled trees on $[6]$ have vertex $1$ of degree $3$?",
+      "options": [
+        { "id": "a", "text": "$75$" },
+        { "id": "b", "text": "$150$" },
+        { "id": "c", "text": "$300$" },
+        { "id": "d", "text": "$1296$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Vertex $1$ appears $\\deg(1) - 1 = 2$ times in the length-$4$ Prüfer code, and the other $2$ entries can be any labels from $\\{2,3,4,5,6\\}$: $\\binom{4}{2} \\cdot 5^2 = 6 \\cdot 25 = 150$."
+    },
+    {
+      "id": "q3.4",
+      "question": "Under Glaisher's bijection from odd-part partitions to distinct-part partitions, what does $3 + 3 + 3 + 1 + 1$ map to?",
+      "options": [
+        { "id": "a", "text": "$9 + 2$" },
+        { "id": "b", "text": "$6 + 3 + 2$" },
+        { "id": "c", "text": "$6 + 5$" },
+        { "id": "d", "text": "$4 + 3 + 2 + 2$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Part $3$ has multiplicity $3 = 2^1 + 2^0$, producing $6$ and $3$; part $1$ has multiplicity $2 = 2^1$, producing $2$. Result: $6 + 3 + 2$."
+    }
+  ]
+}

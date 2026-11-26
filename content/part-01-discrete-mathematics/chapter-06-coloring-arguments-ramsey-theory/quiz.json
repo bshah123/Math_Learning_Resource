@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-06",
+  "title": "Chapter 6 Quiz — Coloring & Ramsey Theory",
+  "questions": [
+    {
+      "id": "q6.1",
+      "question": "By the de Bruijn–Klarner theorem, can a $10 \\times 14$ board be tiled by $1 \\times 4$ bars?",
+      "options": [
+        { "id": "a", "text": "Yes, because $10 \\cdot 14 = 140$ is divisible by $4$" },
+        { "id": "b", "text": "No, because $4$ divides neither $10$ nor $14$" },
+        { "id": "c", "text": "Yes, by placing bars along the boundary first" },
+        { "id": "d", "text": "Only if two opposite corners are removed" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "An $m \\times n$ rectangle can be tiled by $1 \\times k$ bars if and only if $k \\mid m$ or $k \\mid n$, proved via $\\omega^{i+j}$ weights."
+    },
+    {
+      "id": "q6.2",
+      "question": "In the proof that $R(3, 4) \\le 9$, what rules out the balanced case where every vertex in $K_9$ has exactly $3$ red edges and $5$ blue edges?",
+      "options": [
+        { "id": "a", "text": "Mantel's theorem" },
+        { "id": "b", "text": "The handshake lemma: $9 \\cdot 3 = 27$ is odd" },
+        { "id": "c", "text": "Euler's planar formula" },
+        { "id": "d", "text": "Dirac's theorem" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "A $3$-regular red subgraph on $9$ vertices would require degree sum $27$, violating the handshake lemma ($2|E|$ is even)."
+    },
+    {
+      "id": "q6.3",
+      "question": "By Goodman's bound, what is the minimum number of monochromatic triangles in any red/blue edge coloring of $K_6$?",
+      "options": [
+        { "id": "a", "text": "1" },
+        { "id": "b", "text": "2" },
+        { "id": "c", "text": "3" },
+        { "id": "d", "text": "4" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "$\\binom{6}{3} - \\lfloor \\frac{6}{2} \\lfloor (5/2)^2 \\rfloor \\rfloor = 20 - 3 \\cdot 6 = 2$."
+    },
+    {
+      "id": "q6.4",
+      "question": "What is the Schur number $S(2)$, the largest $N$ admitting a $2$-coloring of $[N]$ with no monochromatic solution to $x + y = z$?",
+      "options": [
+        { "id": "a", "text": "3" },
+        { "id": "b", "text": "4" },
+        { "id": "c", "text": "5" },
+        { "id": "d", "text": "8" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Red $\\{1, 4\\}$ and blue $\\{2, 3\\}$ works on $[4]$, whereas $[5]$ forces a monochromatic sum."
+    }
+  ]
+}

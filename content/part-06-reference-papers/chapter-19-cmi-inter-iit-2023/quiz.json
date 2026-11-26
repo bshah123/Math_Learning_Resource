@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-19",
+  "title": "Chapter 19 Quiz — CMI Inter-IIT 2023",
+  "questions": [
+    {
+      "id": "q19.1",
+      "question": "In CMI Problem 1 ($2023 \\times 2023$ real symmetric matrix $A$ with $|a_{ij} - 2023| \\le 1$), what are the minimum and maximum possible values of its largest eigenvalue $\\lambda(A)$?",
+      "options": [
+        { "id": "a", "text": "$2022$ and $2024$" },
+        { "id": "b", "text": "$2022 \\times 2023$ and $2024 \\times 2023$" },
+        { "id": "c", "text": "$2023^2 - 1$ and $2023^2 + 1$" },
+        { "id": "d", "text": "$0$ and $2024 \\times 2023$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Testing unit vector $\\mathbf{1}$ gives $\\lambda(A) \\ge \\langle A\\mathbf{1}, \\mathbf{1}\\rangle \\ge 2022\\cdot 2023$, while Cauchy–Schwarz bounds $\\|Av\\| \\le 2024\\cdot 2023 \\|v\\|$; matrices $2022J$ and $2024J$ attain both."
+    },
+    {
+      "id": "q19.2",
+      "question": "In CMI Problem 4 ($\\chi(G) = k$ with red/blue edge coloring), what theorem extracts a $k$-element independent-set coloring layer if all monochromatic components have size $\\le k - 1$?",
+      "options": [
+        { "id": "a", "text": "Mantel's theorem" },
+        { "id": "b", "text": "Hall's Marriage Theorem" },
+        { "id": "c", "text": "Bertrand's postulate" },
+        { "id": "d", "text": "Euler's polyhedral formula" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Any $j$ red blocks of size $\\ell = k-1$ have $j\\ell$ vertices and must touch at least $j$ blue blocks of size $\\ell$, so Hall's condition gives a perfect matching of size $m$ whose representatives form a valid color class."
+    },
+    {
+      "id": "q19.3",
+      "question": "In CMI Problem 5, why does $(1 + 1/p_N)^N \\to 1$ as $N \\to \\infty$?",
+      "options": [
+        { "id": "a", "text": "Because $p_N$ grows slower than $N$" },
+        { "id": "b", "text": "Because $p_N / N \\sim \\ln N \\to \\infty$, so $(1 + 1/p_N)^N \\le e^{N/p_N} \\to e^0 = 1$" },
+        { "id": "c", "text": "Because $p_N = 2^N$" },
+        { "id": "d", "text": "Because $\\sigma(p_N) = p_N$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "By the Prime Number Theorem ($\\S 9$), $p_N \\sim N \\ln N$, so $N / p_N \\to 0$ and $e^{N/p_N} \\to 1$."
+    },
+    {
+      "id": "q19.4",
+      "question": "In CMI Problem 3, why does bounding $f(x, y) \\le g(x) + g(y)$ always succeed on $\\mathbb{Q} \\times \\mathbb{Q}$ yet fail for some $f$ on $\\mathbb{R} \\times \\mathbb{R}$?",
+      "options": [
+        { "id": "a", "text": "$\\mathbb{Q}$ is bounded while $\\mathbb{R}$ is unbounded" },
+        { "id": "b", "text": "$\\mathbb{Q}$ can be enumerated sequentially so each new element dominates all finite prefixes, whereas $|\\mathbb{R}| = |\\mathbb{N}^\\mathbb{N}|$ allows diagonalizing against every $g$" },
+        { "id": "c", "text": "$\\mathbb{Q}$ has measure zero in $\\mathbb{R}$" },
+        { "id": "d", "text": "Every function on $\\mathbb{Q}$ is continuous" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Countability of $\\mathbb{Q}$ lets us take finite prefix maxima $S_i \\times S_i$, whereas indexing sequences $\\mathbb{N}^\\mathbb{N}$ by $\\mathbb{R}$ defeats every candidate $g$ via diagonalization."
+    }
+  ]
+}

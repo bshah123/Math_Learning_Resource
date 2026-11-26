@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-14",
+  "title": "Chapter 14 Quiz — Vectors, Lattices & Polyhedra",
+  "questions": [
+    {
+      "id": "q14.1",
+      "question": "If three edges of a tetrahedron meet perpendicularly at the origin with intercepts $(1, 0, 0)$, $(0, 2, 0)$, $(0, 0, 3)$, what is the area of the opposite face?",
+      "options": [
+        { "id": "a", "text": "$3$" },
+        { "id": "b", "text": "$3.5$" },
+        { "id": "c", "text": "$4.5$" },
+        { "id": "d", "text": "$7$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "By De Gua's theorem, $\\text{Area}^2 = 1^2 + 3^2 + 1.5^2 = 12.25$, so $\\text{Area} = 3.5 = 7/2$."
+    },
+    {
+      "id": "q14.2",
+      "question": "A simple lattice polygon has $B = 8$ boundary lattice points and area $10$. How many interior lattice points $I$ does it contain?",
+      "options": [
+        { "id": "a", "text": "$5$" },
+        { "id": "b", "text": "$6$" },
+        { "id": "c", "text": "$7$" },
+        { "id": "d", "text": "$8$" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "By Pick's theorem, $10 = I + 8/2 - 1 \\implies I = 7$."
+    },
+    {
+      "id": "q14.3",
+      "question": "With equal edge length $a$, what is the ratio of the volume of a regular octahedron to a regular tetrahedron?",
+      "options": [
+        { "id": "a", "text": "$2$" },
+        { "id": "b", "text": "$3$" },
+        { "id": "c", "text": "$4$" },
+        { "id": "d", "text": "$6$" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Regular octahedron volume is $a^3\\sqrt{2}/3$ and regular tetrahedron volume is $a^3\\sqrt{2}/12$, a ratio of exactly $4$."
+    },
+    {
+      "id": "q14.4",
+      "question": "Why can no equilateral triangle in $\\mathbb{R}^2$ have all three vertices at integer lattice points?",
+      "options": [
+        { "id": "a", "text": "Its angles cannot be $60^\\circ$ under dot products" },
+        { "id": "b", "text": "Its area $(\\sqrt{3}/4)s^2$ is irrational, whereas Shoelace forces lattice polygon areas to be multiples of $1/2$" },
+        { "id": "c", "text": "It violates Euler's formula" },
+        { "id": "d", "text": "Its boundary lattice count must be $0$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Since $s^2 = \\Delta x^2 + \\Delta y^2 \\in \\mathbb{Z}_{>0}$, $\\frac{\\sqrt{3}}{4}s^2$ is irrational, contradicting the Shoelace half-integer area."
+    }
+  ]
+}

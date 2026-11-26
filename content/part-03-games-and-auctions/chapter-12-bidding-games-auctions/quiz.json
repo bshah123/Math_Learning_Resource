@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-12",
+  "title": "Chapter 12 Quiz — Bidding Games & Auctions",
+  "questions": [
+    {
+      "id": "q12.1",
+      "question": "In a Richman race where Left needs $2$ move wins before Right gets $3$, what is Left's critical money threshold $R(0, 0)$?",
+      "options": [
+        { "id": "a", "text": "$1/4$" },
+        { "id": "b", "text": "$5/16$" },
+        { "id": "c", "text": "$3/8$" },
+        { "id": "d", "text": "$11/16$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "It equals the probability Left loses $2$-before-$3$ in fair coin tosses: $1 - \\sum_{k=2}^4 \\binom{4}{k}2^{-4} = 1 - 11/16 = 5/16$."
+    },
+    {
+      "id": "q12.2",
+      "question": "Two bidders raise a price starting at $0$ by any whole number from $1$ to $4$ per turn, and hitting $T = 23$ wins. What opening raise wins for the first bidder?",
+      "options": [
+        { "id": "a", "text": "$1$" },
+        { "id": "b", "text": "$2$" },
+        { "id": "c", "text": "$3$" },
+        { "id": "d", "text": "No winning move exists" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "With $m = 4$, target $m + 1 = 5$. Since $23 \\equiv 3 \\pmod 5$, raising $3$ leaves $20$ to go (a multiple of $5$), guaranteeing a win."
+    },
+    {
+      "id": "q12.3",
+      "question": "In a first-price sealed-bid auction with $5$ bidders whose values are i.i.d. $\\operatorname{Uniform}[0, 1]$, what is the symmetric equilibrium bid for valuation $v$?",
+      "options": [
+        { "id": "a", "text": "$v$" },
+        { "id": "b", "text": "$\\frac{4}{5} v$" },
+        { "id": "c", "text": "$\\frac{4}{5} v^5$" },
+        { "id": "d", "text": "$\\frac{2}{3} v$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "In a first-price auction with $n$ bidders, $b(v) = \\frac{n-1}{n}v = \\frac{4}{5}v$ (while $\\frac{4}{5}v^5$ is the all-pay equilibrium bid)."
+    },
+    {
+      "id": "q12.4",
+      "question": "In the acquiring-a-company problem ($V \\sim \\operatorname{Uniform}[0, 100]$, buyer values firm at $1.5V$), why is offering $b = 40$ unprofitable?",
+      "options": [
+        { "id": "a", "text": "Because the seller rejects offers below $50$" },
+        { "id": "b", "text": "Because conditional on seller acceptance ($V \\le 40$), $\\mathbb{E}[1.5V \\mid V \\le 40] = 30 < 40$" },
+        { "id": "c", "text": "Because first-price shading sets $b = 20$" },
+        { "id": "d", "text": "Because the buyer pays twice" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Conditioned on $b \\ge V$, $V$ is uniform on $[0, b]$ with mean $b/2$, so $1.5(b/2) = 0.75b < b$, yielding expected loss $-b^2/400$."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-11",
+  "title": "Chapter 11 Quiz — Loopy & Cyclic Games",
+  "questions": [
+    {
+      "id": "q11.1",
+      "question": "In the loopy game with $a\\to b, a\\to c, b\\to a, b\\to d, c\\to e, e\\to c$ ($d$ terminal), how does retrograde analysis label vertex $a$?",
+      "options": [
+        { "id": "a", "text": "W (Win)" },
+        { "id": "b", "text": "L (Loss)" },
+        { "id": "c", "text": "D (Draw), achieved only by moving $a \\to c$" },
+        { "id": "d", "text": "D (Draw), achieved by moving $a \\to b$" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "$d$ is L, so $b$ is W; $c$ and $e$ remain D, so from $a$ moving to $b$ loses immediately whereas moving to $c$ achieves a draw."
+    },
+    {
+      "id": "q11.2",
+      "question": "In the circle game of $n$ coins where each player removes $1$ coin or $2$ adjacent coins (normal play), for which $n \\ge 1$ does the FIRST player win?",
+      "options": [
+        { "id": "a", "text": "Only $n = 1$ or $n = 2$" },
+        { "id": "b", "text": "All odd $n$" },
+        { "id": "c", "text": "All $n \\not\\equiv 0 \\pmod 3$" },
+        { "id": "d", "text": "All $n \\ge 1$" }
+      ],
+      "correctOptionId": "a",
+      "explanation": "For $n \\ge 3$, Player 1's opening move leaves a path of $n-1$ or $n-2$ coins, and Player 2 deletes the middle 1 or 2 coins to split it into two equal paths and mirrors thereafter."
+    },
+    {
+      "id": "q11.3",
+      "question": "What does the Ehrenfeucht–Mycielski theorem guarantee for finite Max/Min mean-payoff games?",
+      "options": [
+        { "id": "a", "text": "The value is always $0$" },
+        { "id": "b", "text": "Both players have optimal positional strategies depending only on the current vertex" },
+        { "id": "c", "text": "Max wins iff the graph has a positive-weight edge" },
+        { "id": "d", "text": "Play must end in at most $|V|$ moves" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Optimal strategies can be chosen memorylessly (one fixed outgoing edge per vertex), reducing the game to comparing cycle mean weights."
+    },
+    {
+      "id": "q11.4",
+      "question": "Suppose an edge of weight $100$ is part of a 4-edge cycle whose other three edges each have weight $-20$. What is the cycle's mean-payoff weight?",
+      "options": [
+        { "id": "a", "text": "$40$" },
+        { "id": "b", "text": "$25$" },
+        { "id": "c", "text": "$10$" },
+        { "id": "d", "text": "$-20$" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "A cycle's payoff is its arithmetic average: $(100 - 20 - 20 - 20)/4 = 40/4 = 10$."
+    }
+  ]
+}

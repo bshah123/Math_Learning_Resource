@@ -1,0 +1,167 @@
+[
+  {
+    "id": "orbit-stabilizer",
+    "term": "Orbit-Stabilizer Theorem",
+    "definition": "For a finite group $G$ acting on a set $X$, $|G| = |Gx| \\cdot |G_x|$ for every $x \\in X$.",
+    "simpleExplanation": "The total number of symmetries equals the number of positions $x$ can move to (orbit) multiplied by the number of symmetries keeping $x$ fixed (stabilizer).",
+    "technicalExplanation": "Points $gx$ and $hx$ coincide iff $h^{-1}g \\in G_x$, establishing a bijection between the orbit $Gx$ and left cosets $G / G_x$.",
+    "curriculumReferences": [
+      { "lessonId": "0.1", "lessonTitle": "Symmetry Groups & Orbit-Stabilizer Theorem" },
+      { "lessonId": "5.1", "lessonTitle": "Hypergraphs, Orbit-Stabilizer & Burnside-Pólya Counting" }
+    ]
+  },
+  {
+    "id": "rayleigh-quotient",
+    "term": "Rayleigh Quotient",
+    "definition": "For a real symmetric matrix $A$ and nonzero vector $v$, $R_A(v) = \\frac{\\langle Av, v \\rangle}{\\langle v, v \\rangle} \\in [\\lambda_{\\min}, \\lambda_{\\max}]$.",
+    "simpleExplanation": "Evaluating $\\langle A\\mathbf{1}, \\mathbf{1}\\rangle$ for a unit test vector immediately gives a sharp lower bound on the largest eigenvalue $\\lambda_{\\max}(A)$.",
+    "technicalExplanation": "Used in CMI Inter-IIT 2023 Problem 1 with $v = \\frac{1}{\\sqrt{2023}}\\mathbf{1}$ to bound $\\lambda(A) \\ge 2022 \\times 2023$.",
+    "curriculumReferences": [
+      { "lessonId": "0.2", "lessonTitle": "Probability, Inequalities, Matrices & Growth Rates" },
+      { "lessonId": "19.1", "lessonTitle": "Symmetric Eigenvalues, Cauchy–Schwarz & Cardinality (CMI P1–P3)" }
+    ]
+  },
+  {
+    "id": "hall-matching",
+    "term": "Hall's Marriage Theorem",
+    "definition": "A bipartite graph with parts $X, Y$ has a matching covering $X$ iff $|N(S)| \\ge |S|$ for every $S \\subseteq X$.",
+    "simpleExplanation": "Every subset of left vertices must jointly touch at least as many right vertices; regular bipartite graphs satisfy this automatically.",
+    "technicalExplanation": "Splits $k$-regular bipartite graphs into $k$ perfect matchings (§1.2) and solves CMI Inter-IIT 2023 Problem 4 on monochromatic trees in $k$-chromatic graphs.",
+    "curriculumReferences": [
+      { "lessonId": "1.2", "lessonTitle": "Hall's Matching, Mantel's Theorem & Planarity" },
+      { "lessonId": "19.2", "lessonTitle": "Hall's Monochromatic Trees & Deficient Sumsets (CMI P4–P5)" }
+    ]
+  },
+  {
+    "id": "ore-theorem",
+    "term": "Ore's Theorem",
+    "definition": "A simple graph on $n \\ge 3$ vertices satisfying $\\deg u + \\deg v \\ge n$ for every non-adjacent pair $u, v$ has a Hamiltonian cycle.",
+    "simpleExplanation": "If every non-adjacent pair of vertices together has at least $n$ neighbors, they share enough connections to close a spanning cycle.",
+    "technicalExplanation": "Strict generalization of Dirac's condition ($\\delta(G) \\ge n/2$). Sufficient, never necessary ($C_n$ is Hamiltonian with degree $2$).",
+    "curriculumReferences": [
+      { "lessonId": "2.1", "lessonTitle": "Obstructions, Ore & Dirac Theorems, Rédei & Gray Codes" }
+    ]
+  },
+  {
+    "id": "catalan-numbers",
+    "term": "Catalan Numbers",
+    "definition": "$C_n = \\frac{1}{n+1}\\binom{2n}{n} = \\binom{2n}{n} - \\binom{2n}{n-1}$, counting E/N paths from $(0,0)$ to $(n,n)$ never crossing $y=x$.",
+    "simpleExplanation": "Subtract paths touching $y = x + 1$ by reflecting their suffix across that diagonal into paths ending at $(n-1, n+1)$.",
+    "technicalExplanation": "Equinumerous with balanced $n$-pair bracket strings, full binary trees with $n+1$ leaves, and triangulations of a convex $(n+2)$-gon.",
+    "curriculumReferences": [
+      { "lessonId": "3.1", "lessonTitle": "Bijections, Catalan Numbers & Double Counting" }
+    ]
+  },
+  {
+    "id": "prufer-code",
+    "term": "Prüfer Code",
+    "definition": "A bijection between labeled trees on $[n]$ and sequences in $[n]^{n-2}$ obtained by repeatedly deleting the smallest leaf and recording its neighbor.",
+    "simpleExplanation": "Each vertex $v$ appears $\\deg(v) - 1$ times in the code, turning tree enumeration into basic sequence counting.",
+    "technicalExplanation": "Proves Cayley's formula $n^{n-2}$ and the multinomial degree-sequence count $(n-2)! / \\prod (d_i - 1)!$.",
+    "curriculumReferences": [
+      { "lessonId": "3.2", "lessonTitle": "Prüfer Codes, Spanning Trees & Integer Partitions" }
+    ]
+  },
+  {
+    "id": "burnside-lemma",
+    "term": "Burnside's Lemma",
+    "definition": "The number of orbits of a finite group $G$ acting on $X$ equals $\\frac{1}{|G|} \\sum_{g \\in G} |\\operatorname{Fix}(g)|$.",
+    "simpleExplanation": "To count objects up to symmetry without double-counting, average the number of colorings left unchanged by each group element.",
+    "technicalExplanation": "Proved by double-counting fixed pairs $(g, x)$ with $gx = x$; Pólya's theorem specializes $|\\operatorname{Fix}(g)| = k^{c(g)}$ for $k$-colorings.",
+    "curriculumReferences": [
+      { "lessonId": "5.1", "lessonTitle": "Hypergraphs, Orbit-Stabilizer & Burnside-Pólya Counting" }
+    ]
+  },
+  {
+    "id": "ramsey-number",
+    "term": "Ramsey Number R(s, t)",
+    "definition": "The minimum $n$ such that every 2-coloring (red/blue) of the edges of $K_n$ contains a red $K_s$ or a blue $K_t$.",
+    "simpleExplanation": "Complete disorder is impossible in sufficiently large structures; $R(3,3)=6$, $R(3,4)=9$, and $R(4,4)=18$.",
+    "technicalExplanation": "Satisfies $R(s,t) \\le R(s-1,t) + R(s,t-1)$ with strict inequality when both right-hand terms are even; $R(k,k) > 2^{k/2}$ via probabilistic method.",
+    "curriculumReferences": [
+      { "lessonId": "6.2", "lessonTitle": "Ramsey Numbers, Probabilistic Bounds & Arithmetic Ramsey" }
+    ]
+  },
+  {
+    "id": "ultrametric",
+    "term": "Ultrametric Space",
+    "definition": "A metric space satisfying the strong triangle inequality $d(x, z) \\le \\max(d(x, y), d(y, z))$.",
+    "simpleExplanation": "Every triangle is isosceles with its two longest sides equal, and every point inside a ball is its center.",
+    "technicalExplanation": "Key examples are the $p$-adic metric $p^{-v_p(x-y)}$ and lowest-common-ancestor distances on leaves of a rooted tree.",
+    "curriculumReferences": [
+      { "lessonId": "7.1", "lessonTitle": "Metric Axioms, Ultrametrics, Tree Metrics & Packing" }
+    ]
+  },
+  {
+    "id": "envelope-theorem",
+    "term": "Envelope Theorem",
+    "definition": "If $V(\\theta) = \\max_x f(x, \\theta)$ is attained smoothly at $x^*(\\theta)$, then $V'(\\theta) = \\frac{\\partial f}{\\partial \\theta}(x^*(\\theta), \\theta)$.",
+    "simpleExplanation": "When a parameter shifts slightly, the re-optimization movement $dx^*/d\\theta$ contributes zero first-order change because $\\partial f / \\partial x = 0$ at the optimum.",
+    "technicalExplanation": "Directly establishes the auction payoff derivative $U'(v) = P(\\text{win} \\mid v)$ that proves Revenue Equivalence.",
+    "curriculumReferences": [
+      { "lessonId": "8.1", "lessonTitle": "Gradients, Hessians, Lagrange Multipliers & Envelope Theorem" },
+      { "lessonId": "12.2", "lessonTitle": "Sealed-Bid Auctions, Revenue Equivalence & Winner's Curse" }
+    ]
+  },
+  {
+    "id": "bertrand-postulate",
+    "term": "Bertrand's Postulate",
+    "definition": "For every integer $n \\ge 1$, there exists a prime $p$ satisfying $n < p \\le 2n$.",
+    "simpleExplanation": "You never have to double a number without hitting at least one prime.",
+    "technicalExplanation": "Chebyshev (1852); Erdős's 1932 proof bounds prime powers dividing $\\binom{2n}{n}$ below $(2n)^{\\sqrt{2n}} 4^{2n/3}$, yielding a contradiction for $n \\ge 468$.",
+    "curriculumReferences": [
+      { "lessonId": "9.1", "lessonTitle": "Legendre, Kummer, Erdős's Proof of Bertrand & Prime Bounds" }
+    ]
+  },
+  {
+    "id": "richman-cost",
+    "term": "Richman Cost",
+    "definition": "On a finite game graph, $R(t_L)=0$, $R(t_R)=1$, and $R(v) = \\frac{1}{2}(\\max_{w \\in S(v)} R(w) + \\min_{w \\in S(v)} R(w))$.",
+    "simpleExplanation": "The critical fraction of total money Left needs to force reaching $t_L$ when moves are bought at auction and paid to the opponent.",
+    "technicalExplanation": "Equals the probability that Left loses if a fair coin replaces the auction and both players choose moves optimally.",
+    "curriculumReferences": [
+      { "lessonId": "12.1", "lessonTitle": "Richman Bidding, Whole-Chip Parity & Raise Ladders" }
+    ]
+  },
+  {
+    "id": "ptolemy-theorem",
+    "term": "Ptolemy's Theorem & Inequality",
+    "definition": "For any four points $A,B,C,D$ in the plane, $AC \\cdot BD \\le AB \\cdot CD + AD \\cdot BC$, with equality iff concyclic or collinear in cyclic order.",
+    "simpleExplanation": "In a cyclic quadrilateral, the product of the diagonals equals the sum of products of opposite sides.",
+    "technicalExplanation": "Follows in one line from the complex identity $(a-c)(b-d) = (a-b)(c-d) + (a-d)(b-c)$ and holds in every inner-product space.",
+    "curriculumReferences": [
+      { "lessonId": "7.1", "lessonTitle": "Metric Axioms, Ultrametrics, Tree Metrics & Packing" },
+      { "lessonId": "13.1", "lessonTitle": "Triangle Toolkit, Circle Power & Ptolemy's Theorem" }
+    ]
+  },
+  {
+    "id": "fermat-point",
+    "term": "Fermat Point",
+    "definition": "The point $P$ minimizing $PA + PB + PC$ for triangle $ABC$.",
+    "simpleExplanation": "If all angles are under $120^\\circ$, $P$ sees each side at $120^\\circ$; otherwise the obtuse vertex itself minimizes the sum.",
+    "technicalExplanation": "Proved by rotating $\\triangle APB$ by $60^\\circ$ about $B$ so $PA + PB + PC$ unfolds into a polygonal path between fixed points $A'$ and $C$.",
+    "curriculumReferences": [
+      { "lessonId": "15.1", "lessonTitle": "Five Classic Three-Point Problems" }
+    ]
+  },
+  {
+    "id": "graham-kleitman-walk",
+    "term": "Pedestrian / Swapping Argument (Graham–Kleitman)",
+    "definition": "Processing edges $e_1 < e_2 < \\dots < e_m$ in $K_n$ while swapping two walkers at each edge shows average path length is $n-1$.",
+    "simpleExplanation": "Every labeled edge pushes two walkers one step further along strictly increasing paths, proving at least one walker traverses $\\ge n-1$ edges.",
+    "technicalExplanation": "Directly solves Problem 3 of the Math Bowl 2024 Screening Test on $K_n$.",
+    "curriculumReferences": [
+      { "lessonId": "18.2", "lessonTitle": "Linear Algebra, Graphs & Probability (P3, P5–P7, P15, P17–18)" }
+    ]
+  },
+  {
+    "id": "commutator-trace",
+    "term": "Rank-1 Commutator Trace Identity",
+    "definition": "If $C = AB - BA$ satisfies $\\operatorname{rk}(C + I) = 1$, then $C = uv^{\\mathsf{T}} - I$ with $v^{\\mathsf{T}} u = n$, giving $\\operatorname{tr}(ABAB) - \\operatorname{tr}(A^2B^2) = \\frac{1}{2}n(n-1)$.",
+    "simpleExplanation": "Since $\\operatorname{tr}(AB-BA)=0$, shifting $C$ by $I$ forces $v^{\\mathsf{T}}u = n$ and fixes $\\operatorname{tr}(C^2) = n(n-1)$.",
+    "technicalExplanation": "Tested directly in Problem 7 of the Math Bowl 2024 Screening Test.",
+    "curriculumReferences": [
+      { "lessonId": "18.2", "lessonTitle": "Linear Algebra, Graphs & Probability (P3, P5–P7, P15, P17–18)" }
+    ]
+  }
+]

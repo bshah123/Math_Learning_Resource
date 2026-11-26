@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-16",
+  "title": "Chapter 16 Quiz — Packing Efficiency",
+  "questions": [
+    {
+      "id": "q16.1",
+      "question": "Along which direction do equal spheres touch in a Body-Centered Cubic (BCC) unit cell, and what is the resulting packing efficiency?",
+      "options": [
+        { "id": "a", "text": "Cube edge; $\\pi/6 \\approx 52.4\\%$" },
+        { "id": "b", "text": "Body diagonal; $\\pi\\sqrt{3}/8 \\approx 68.0\\%$" },
+        { "id": "c", "text": "Face diagonal; $\\pi/(3\\sqrt{2}) \\approx 74.0\\%$" },
+        { "id": "d", "text": "Body diagonal; $18/19 \\approx 94.7\\%$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "In BCC, the central sphere touches all $8$ corner spheres along the body diagonal, so $\\sqrt{3}a = 4r$ with $2$ spheres per cell, giving $\\pi\\sqrt{3}/8 \\approx 68.0\\%$."
+    },
+    {
+      "id": "q16.2",
+      "question": "In an FCC close-packed crystal with $N$ host spheres, how many octahedral and tetrahedral voids exist?",
+      "options": [
+        { "id": "a", "text": "$N$ octahedral and $N$ tetrahedral" },
+        { "id": "b", "text": "$2N$ octahedral and $N$ tetrahedral" },
+        { "id": "c", "text": "$N$ octahedral and $2N$ tetrahedral" },
+        { "id": "d", "text": "$4N$ octahedral and $8N$ tetrahedral" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "In an FCC unit cell ($N=4$ spheres), there are $1 + 12/4 = 4 = N$ octahedral voids and $8 = 2N$ tetrahedral voids."
+    },
+    {
+      "id": "q16.3",
+      "question": "What is the maximum radius ratio $r/R$ of a sphere fitting inside an octahedral void of host spheres of radius $R$?",
+      "options": [
+        { "id": "a", "text": "$\\sqrt{3/2} - 1 \\approx 0.225$" },
+        { "id": "b", "text": "$\\sqrt{2} - 1 \\approx 0.414$" },
+        { "id": "c", "text": "$\\sqrt{3} - 1 \\approx 0.732$" },
+        { "id": "d", "text": "$1/2$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "The octahedron of edge $2R$ has center-to-vertex distance $\\sqrt{2}R$, so $R + r = \\sqrt{2}R \\implies r/R = \\sqrt{2} - 1$."
+    },
+    {
+      "id": "q16.4",
+      "question": "What is the densest lattice packing density of regular octahedra alone (Minkowski, 1904), and which polyhedra are the Voronoi cells of the BCC lattice?",
+      "options": [
+        { "id": "a", "text": "$\\pi/(3\\sqrt{2})$; rhombic dodecahedra" },
+        { "id": "b", "text": "$18/19$; truncated octahedra" },
+        { "id": "c", "text": "$18/19$; rhombic dodecahedra" },
+        { "id": "d", "text": "$2/3$; regular tetrahedra" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Regular octahedra achieve $18/19 \\approx 94.7\\%$ lattice packing density, while truncated octahedra are the space-tiling Voronoi cells of BCC."
+    }
+  ]
+}

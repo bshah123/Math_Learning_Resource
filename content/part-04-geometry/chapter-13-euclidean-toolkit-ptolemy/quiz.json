@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-13",
+  "title": "Chapter 13 Quiz — Euclidean Toolkit & Ptolemy",
+  "questions": [
+    {
+      "id": "q13.1",
+      "question": "For a $13$-$14$-$15$ triangle, what is the squared distance $OI^2$ between circumcenter $O$ and incenter $I$?",
+      "options": [
+        { "id": "a", "text": "$1$" },
+        { "id": "b", "text": "$65/64$" },
+        { "id": "c", "text": "$15/16$" },
+        { "id": "d", "text": "$65/8$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "$K = 84$, $r = 4$, $R = 65/8$, and Euler's formula gives $OI^2 = R(R - 2r) = \\frac{65}{8}(\\frac{65}{8} - 8) = \\frac{65}{64}$."
+    },
+    {
+      "id": "q13.2",
+      "question": "In a regular heptagon with side $a$ and diagonals $b < c$, which identity follows from Ptolemy's theorem on vertices $1, 2, 3, 5$?",
+      "options": [
+        { "id": "a", "text": "$c^2 = ab + b^2$" },
+        { "id": "b", "text": "$1/a = 1/b + 1/c$" },
+        { "id": "c", "text": "$a + b = c$" },
+        { "id": "d", "text": "$b^2 = ac$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Cyclic quadrilateral $1$-$2$-$3$-$5$ has opposite sides $(a, b)$ and $(a, c)$ and diagonals $b, c$, so $bc = ab + ac$, or $1/a = 1/b + 1/c$."
+    },
+    {
+      "id": "q13.3",
+      "question": "If $P$ lies on the circumcircle of equilateral triangle $ABC$ on arc $BC$ not containing $A$, what holds among $PA, PB, PC$?",
+      "options": [
+        { "id": "a", "text": "$PA^2 = PB^2 + PC^2$" },
+        { "id": "b", "text": "$PA = PB + PC$" },
+        { "id": "c", "text": "$PA < PB + PC$" },
+        { "id": "d", "text": "$PA = 2(PB + PC)/\\sqrt{3}$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Applying Ptolemy's equality to cyclic $ABPC$ gives $PA \\cdot s = PB \\cdot s + PC \\cdot s$, so $PA = PB + PC$."
+    },
+    {
+      "id": "q13.4",
+      "question": "By Menelaus's theorem, what must the product of signed ratios $(BD/DC)(CE/EA)(AF/FB)$ equal for $D, E, F$ on lines $BC, CA, AB$ to be collinear?",
+      "options": [
+        { "id": "a", "text": "$1$" },
+        { "id": "b", "text": "$0$" },
+        { "id": "c", "text": "$-1$" },
+        { "id": "d", "text": "$1/2$" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Ceva (concurrent cevians) gives $+1$, whereas Menelaus (collinear points) gives $-1$."
+    }
+  ]
+}

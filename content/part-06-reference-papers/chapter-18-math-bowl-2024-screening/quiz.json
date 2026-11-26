@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-18",
+  "title": "Chapter 18 Quiz — Math Bowl 2024 Screening",
+  "questions": [
+    {
+      "id": "q18.1",
+      "question": "In Screening Problem 2 ($O$ circle center, $A$ fixed interior point with $0 < OA < R$), when is $\\angle OPA$ maximized?",
+      "options": [
+        { "id": "a", "text": "When $P, O, A$ are collinear" },
+        { "id": "b", "text": "When $\\angle OAP = 90^\\circ$ ($PA \\perp OA$)" },
+        { "id": "c", "text": "When $\\triangle OPA$ is isosceles ($OP = PA$)" },
+        { "id": "d", "text": "When $PA$ is tangent to the circle" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "By the Law of Sines, $\\sin\\angle OPA = \\frac{OA}{R}\\sin\\angle OAP$, which is maximized (since $\\angle OPA < 90^\\circ$) when $\\sin\\angle OAP = 1$, i.e. $PA \\perp OA$."
+    },
+    {
+      "id": "q18.2",
+      "question": "In Screening Problem 10 ($f: \\mathbb{R} \\to \\mathbb{R}$ with IVP and $f^n(x) = -x$), which functions work?",
+      "options": [
+        { "id": "a", "text": "$f(x) = -x$ for all $n$" },
+        { "id": "b", "text": "$f(x) = -x$ when $n$ is odd; no solutions when $n$ is even" },
+        { "id": "c", "text": "$f(x) = x - 1$ when $n$ is even" },
+        { "id": "d", "text": "Infinitely many piecewise continuous functions" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "A bijective IVP function is continuous and strictly monotonic, so $f^{2k}$ is strictly increasing and can never equal $-x$ when $n$ is even; for odd $n$, $f^2(x)=x$ forces $f(x)=-x$."
+    },
+    {
+      "id": "q18.3",
+      "question": "What is the remainder when $\\prod_{i=1}^{2016} (i^4 + 5)$ is divided by $2017$ (Screening Problem 16)?",
+      "options": [
+        { "id": "a", "text": "$0$" },
+        { "id": "b", "text": "$1$" },
+        { "id": "c", "text": "$2013$ (i.e. $-4$)" },
+        { "id": "d", "text": "$2016$ (i.e. $-1$)" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "The $4$th powers form the order-$504$ subgroup, giving $(5^{504} - 1)^4$. Since $(5/2017) = -1$, $w = 5^{504}$ obeys $w^2 \\equiv -1$, and $(w - 1)^4 = 4w^2 \\equiv -4 \\equiv 2013 \\pmod{2017}$."
+    },
+    {
+      "id": "q18.4",
+      "question": "In Screening Problem 18 (the 6-vertex rumor graph with white nodes $0, 1$ of degrees $3, 2$ and total degree sum $16$), what is the probability the process ends all-white?",
+      "options": [
+        { "id": "a", "text": "$1/3$" },
+        { "id": "b", "text": "$5/16$" },
+        { "id": "c", "text": "$3/8$" },
+        { "id": "d", "text": "$1/4$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Because $\\sum_{v} \\deg(v) X_v(t)$ is a martingale, the absorption probability equals $(\\deg(0)+\\deg(1))/(2|E|) = (3+2)/16 = 5/16$."
+    }
+  ]
+}

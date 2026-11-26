@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-07",
+  "title": "Chapter 7 Quiz — Metric Spaces",
+  "questions": [
+    {
+      "id": "q7.1",
+      "question": "In the $5$-adic metric $d_5(x, y) = 5^{-v_5(x-y)}$, what are the pairwise distances among $1, 6, 26$?",
+      "options": [
+        { "id": "a", "text": "$1/5, 1/5, 1/25$" },
+        { "id": "b", "text": "$1/5, 1/25, 1/125$" },
+        { "id": "c", "text": "$1, 1/5, 1/25$" },
+        { "id": "d", "text": "$5, 25, 25$" }
+      ],
+      "correctOptionId": "a",
+      "explanation": "$d_5(1, 6) = 5^{-1} = 1/5$, $d_5(6, 26) = 5^{-1} = 1/5$, and $d_5(1, 26) = 5^{-2} = 1/25$: an isosceles triangle with the two longest sides equal."
+    },
+    {
+      "id": "q7.2",
+      "question": "How many binary strings of length $10$ lie within Hamming distance $2$ of the all-zeros string?",
+      "options": [
+        { "id": "a", "text": "45" },
+        { "id": "b", "text": "55" },
+        { "id": "c", "text": "56" },
+        { "id": "d", "text": "66" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "$V(10, 2) = \\binom{10}{0} + \\binom{10}{1} + \\binom{10}{2} = 1 + 10 + 45 = 56$."
+    },
+    {
+      "id": "q7.3",
+      "question": "Why does $d(f, g) = |f(0) - g(0)|$ fail to be a metric on continuous functions $f, g : \\mathbb{R} \\to \\mathbb{R}$?",
+      "options": [
+        { "id": "a", "text": "It fails symmetry" },
+        { "id": "b", "text": "It fails the triangle inequality" },
+        { "id": "c", "text": "Distinct functions with $f(0) = g(0)$ have distance $0$" },
+        { "id": "d", "text": "It can take negative values" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "It violates positive definiteness ($d(x,y) = 0 \\iff x = y$), making it only a pseudometric."
+    },
+    {
+      "id": "q7.4",
+      "question": "What does Schoenberg's theorem say about a normed space in which Ptolemy's inequality holds for all quadruples?",
+      "options": [
+        { "id": "a", "text": "It must be finite-dimensional" },
+        { "id": "b", "text": "Its norm comes from an inner product" },
+        { "id": "c", "text": "It is an ultrametric space" },
+        { "id": "d", "text": "Every triangle is equilateral" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "A normed vector space is Ptolemaic if and only if its norm is induced by an inner product."
+    }
+  ]
+}

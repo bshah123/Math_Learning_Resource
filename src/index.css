@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  body {
+    min-height: 100vh;
+    @apply antialiased selection:bg-indigo-500 selection:text-white;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+}
+
+/* Signature Callout Box System */
+.callout {
+  @apply my-6 p-4 sm:p-5 rounded-xl border border-l-4 text-[13.5px] sm:text-[15px] leading-[1.72] shadow-sm transition-all duration-200;
+}
+.callout-body p {
+  @apply mb-2.5 last:mb-0 text-[13.5px] sm:text-[15px] leading-[1.72] text-inherit;
+}
+.callout-body ul, .callout-body ol {
+  @apply my-2 space-y-1.5 text-[13.5px] sm:text-[15px] leading-[1.7] text-inherit;
+}
+.callout-definition {
+  @apply bg-sky-50/85 dark:bg-sky-950/35 border-sky-200 dark:border-sky-800/60 border-l-sky-500 text-sky-950 dark:text-sky-100 shadow-sky-500/5;
+}
+.callout-intuition {
+  @apply bg-amber-50/85 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800/60 border-l-amber-500 text-amber-950 dark:text-amber-100 shadow-amber-500/5;
+}
+.callout-theorem {
+  @apply bg-indigo-50/80 dark:bg-indigo-950/35 border-indigo-300 dark:border-indigo-700/60 border-l-indigo-500 text-indigo-950 dark:text-indigo-100 shadow-indigo-500/5;
+}
+.callout-proof {
+  @apply bg-slate-100/80 dark:bg-slate-900/80 border-slate-300 dark:border-slate-700 border-l-slate-400 text-slate-900 dark:text-slate-200 shadow-slate-500/5;
+}
+.callout-best-practice {
+  @apply bg-emerald-50/80 dark:bg-emerald-950/30 border-emerald-300 dark:border-emerald-700/60 text-emerald-950 dark:text-emerald-200 shadow-emerald-500/5;
+}
+.callout-warning {
+  @apply bg-rose-50/80 dark:bg-rose-950/30 border-rose-300 dark:border-rose-700/60 text-rose-950 dark:text-rose-200 shadow-rose-500/5;
+}
+.callout-key-insight {
+  @apply bg-cyan-50/80 dark:bg-cyan-950/30 border-cyan-300 dark:border-cyan-700/60 text-cyan-950 dark:text-cyan-200 shadow-cyan-500/5;
+}
+.callout-advanced {
+  @apply bg-slate-100/90 dark:bg-slate-900/90 border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 shadow-slate-500/5;
+}
+.callout-qa {
+  @apply bg-indigo-50/80 dark:bg-indigo-950/30 border-indigo-300 dark:border-indigo-700/60 text-indigo-950 dark:text-indigo-200 shadow-indigo-500/5;
+}
+.callout-authors-note {
+  @apply bg-amber-50/80 dark:bg-amber-950/20 border-amber-300 dark:border-amber-700/50 text-amber-950 dark:text-amber-200 shadow-amber-500/5;
+}
+.callout-related-content {
+  @apply bg-blue-50/80 dark:bg-blue-950/30 border-blue-300 dark:border-blue-700/60 text-blue-950 dark:text-blue-200 shadow-blue-500/5;
+}
+.callout-note {
+  @apply bg-blue-50/80 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800/60 text-blue-950 dark:text-blue-200;
+}
+.callout-tip {
+  @apply bg-emerald-50/80 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/60 text-emerald-950 dark:text-emerald-200;
+}
+.callout-trap {
+  @apply bg-rose-50/80 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800/60 text-rose-950 dark:text-rose-200;
+}
+.callout-ai {
+  @apply bg-gradient-to-r from-purple-50/90 to-indigo-50/90 dark:from-purple-950/30 dark:to-indigo-950/30 border-purple-200 dark:border-purple-800/60 text-purple-950 dark:text-purple-200;
+}
+
+/* Interactive Show Proof / Solution Styles */
+.wpsolution-container {
+  @apply my-4 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-900/60 shadow-sm transition-all;
+}
+.wpsolution-summary {
+  @apply flex items-center justify-between px-4 py-2.5 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-semibold text-indigo-600 dark:text-indigo-400 cursor-pointer select-none transition-colors;
+}
+.wpsolution-content {
+  @apply p-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50/40 dark:bg-slate-950/40 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed;
+}
+
+code, pre, kbd, samp, .terminal-output {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
+}
+
+.terminal-output {
+  @apply my-3 rounded-xl border border-slate-800 bg-slate-950 font-mono text-xs text-slate-300 shadow-inner overflow-x-auto;
+}
+.terminal-output-header {
+  @apply px-3 py-1.5 bg-slate-900/80 border-b border-slate-800/80 text-[10px] uppercase font-bold text-slate-400 flex items-center justify-between tracking-wider;
+}
+.terminal-output-body {
+  @apply p-3 whitespace-pre-wrap leading-relaxed;
+}
+
+.prose-deepdive h1 {
+  @apply text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-slate-50 mt-10 mb-6 pb-3 border-b border-slate-200 dark:border-slate-800 flex items-center gap-2;
+}
+.prose-deepdive h2 {
+  @apply text-xl sm:text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 mt-10 mb-4 pb-2 border-b border-slate-200/60 dark:border-slate-800/60 flex items-center gap-2;
+}
+.prose-deepdive h3 {
+  @apply text-lg sm:text-xl font-semibold text-slate-800 dark:text-slate-200 mt-8 mb-3;
+}
+.prose-deepdive h4 {
+  @apply text-base font-semibold text-slate-800 dark:text-slate-200 mt-6 mb-2;
+}
+.prose-deepdive p {
+  @apply text-slate-700 dark:text-slate-300 leading-[1.78] mb-5 text-[15px] sm:text-[16px];
+}
+.prose-deepdive ul {
+  @apply list-disc list-inside space-y-2.5 mb-5 text-slate-700 dark:text-slate-300 text-[15px] sm:text-[16px] leading-[1.72];
+}
+.prose-deepdive ol {
+  @apply list-decimal list-inside space-y-2.5 mb-5 text-slate-700 dark:text-slate-300 text-[15px] sm:text-[16px] leading-[1.72];
+}
+.prose-deepdive code:not(pre code) {
+  @apply px-1.5 py-0.5 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800/80 text-indigo-600 dark:text-indigo-400 border border-slate-200 dark:border-slate-700/60 font-semibold;
+}
+
+/* Hand-drawn lesson diagrams */
+:root {
+  --sk-ink: #1e293b;
+  --sk-muted: #64748b;
+  --sk-blue: #2563eb;
+  --sk-amber: #d97706;
+  --sk-green: #059669;
+  --sk-rose: #e11d48;
+  --sk-violet: #7c3aed;
+  --sk-note: #fef3c7;
+  --sk-blue-soft: #dbeafe;
+  --sk-amber-soft: #fef3c7;
+  --sk-green-soft: #d1fae5;
+  --sk-rose-soft: #ffe4e6;
+}
+.dark {
+  --sk-ink: #e2e8f0;
+  --sk-muted: #94a3b8;
+  --sk-blue: #60a5fa;
+  --sk-amber: #fbbf24;
+  --sk-green: #34d399;
+  --sk-rose: #fb7185;
+  --sk-violet: #a78bfa;
+  --sk-note: rgba(251, 191, 36, 0.14);
+  --sk-blue-soft: rgba(96, 165, 250, 0.16);
+  --sk-amber-soft: rgba(251, 191, 36, 0.16);
+  --sk-green-soft: rgba(52, 211, 153, 0.16);
+  --sk-rose-soft: rgba(251, 113, 133, 0.16);
+}
+.sk-hand { font-family: 'Caveat', 'Comic Sans MS', cursive; }
+.sk-mono { font-family: 'Fira Code', ui-monospace, monospace; }
+.sketch-figure svg { width: 100%; height: auto; display: block; }

@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-08",
+  "title": "Chapter 8 Quiz — Multivariable Optimization",
+  "questions": [
+    {
+      "id": "q8.1",
+      "question": "For $f(x, y) = x^3 - 3x + y^2$, how are the critical points $(1, 0)$ and $(-1, 0)$ classified?",
+      "options": [
+        { "id": "a", "text": "Both are local minima" },
+        { "id": "b", "text": "$(1, 0)$ is a local minimum and $(-1, 0)$ is a saddle point" },
+        { "id": "c", "text": "$(1, 0)$ is a local maximum and $(-1, 0)$ is a local minimum" },
+        { "id": "d", "text": "Both are saddle points" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "$D = f_{xx}f_{yy} - f_{xy}^2 = 12x$. At $(1,0)$, $D = 12 > 0$ and $f_{xx} = 6 > 0$ (local min); at $(-1,0)$, $D = -12 < 0$ (saddle)."
+    },
+    {
+      "id": "q8.2",
+      "question": "What does the Envelope theorem guarantee when $V(\\theta) = \\max_x f(x, \\theta)$ is achieved smoothly at $x^*(\\theta)$?",
+      "options": [
+        { "id": "a", "text": "$V'(\\theta) = 0$ identically" },
+        { "id": "b", "text": "$V'(\\theta) = \\frac{\\partial f}{\\partial \\theta}(x^*(\\theta), \\theta)$" },
+        { "id": "c", "text": "$x^*(\\theta)$ is linear in $\\theta$" },
+        { "id": "d", "text": "The Hessian with respect to $x$ is zero" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "By the chain rule, $V'(\\theta) = \\frac{\\partial f}{\\partial x} \\frac{dx^*}{d\\theta} + \\frac{\\partial f}{\\partial \\theta}$, and $\\frac{\\partial f}{\\partial x} = 0$ at $x^*(\\theta)$."
+    },
+    {
+      "id": "q8.3",
+      "question": "For gradient descent $x \\leftarrow x - \\eta \\nabla f(x)$ on a quadratic whose Hessian has eigenvalues in $(0, L]$, what learning rate range guarantees convergence?",
+      "options": [
+        { "id": "a", "text": "$0 < \\eta < 1/(2L)$" },
+        { "id": "b", "text": "$0 < \\eta < 1/L$" },
+        { "id": "c", "text": "$0 < \\eta < 2/L$" },
+        { "id": "d", "text": "$0 < \\eta < L$" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Each eigenmode scales by $1 - \\eta \\lambda_i$, which requires $|1 - \\eta L| < 1$, i.e., $0 < \\eta < 2/L$."
+    },
+    {
+      "id": "q8.4",
+      "question": "Which points can standard Lagrange multipliers $\\nabla f = \\lambda \\nabla g$ fail to detect on a constrained domain?",
+      "options": [
+        { "id": "a", "text": "Interior global maxima" },
+        { "id": "b", "text": "Points where $\\nabla g = 0$ or boundary points of the domain" },
+        { "id": "c", "text": "Points where $\\lambda > 0$" },
+        { "id": "d", "text": "Points where $f$ is strictly convex" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Lagrange multipliers assume $\\nabla g \\neq 0$ and interior smoothness on the surface; singular points ($\\nabla g = 0$) and boundary points must be checked separately."
+    }
+  ]
+}

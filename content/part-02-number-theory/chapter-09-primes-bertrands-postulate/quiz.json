@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-09",
+  "title": "Chapter 9 Quiz — Primes & Bertrand's Postulate",
+  "questions": [
+    {
+      "id": "q9.1",
+      "question": "Using Legendre's digit-sum formula, what is $v_2(100!)$?",
+      "options": [
+        { "id": "a", "text": "95" },
+        { "id": "b", "text": "97" },
+        { "id": "c", "text": "98" },
+        { "id": "d", "text": "99" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "$100$ in binary is $1100100_2$, which has $s_2(100) = 3$, so $v_2(100!) = (100 - 3)/(2 - 1) = 97$."
+    },
+    {
+      "id": "q9.2",
+      "question": "For $n = 15$, which interval of primes is guaranteed to contribute exponent $0$ to $\\binom{2n}{n} = \\binom{30}{15}$?",
+      "options": [
+        { "id": "a", "text": "$(\\sqrt{30}, 10]$" },
+        { "id": "b", "text": "$(10, 15]$" },
+        { "id": "c", "text": "$(15, 30]$" },
+        { "id": "d", "text": "$[2, 5]$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Primes in $(2n/3, n] = (10, 15]$ satisfy $\\lfloor 30/p \\rfloor - 2\\lfloor 15/p \\rfloor = 2 - 2\\cdot 1 = 0$ (so $11$ and $13$ do not divide $\\binom{30}{15}$)."
+    },
+    {
+      "id": "q9.3",
+      "question": "In the proof that $H_n = 1 + 1/2 + \\dots + 1/n$ is never an integer for $n \\ge 2$, why is a prime $p \\in (n/2, n]$ chosen?",
+      "options": [
+        { "id": "a", "text": "Because $p$ divides every numerator" },
+        { "id": "b", "text": "Because $1/p$ is the unique term whose denominator is divisible by $p$" },
+        { "id": "c", "text": "Because $2p \\le n$" },
+        { "id": "d", "text": "Because $H_n < p$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Since $2p > n$, no other multiple of $p$ lies in $[1, n]$, leaving $1/p$ as the sole term with a factor of $p$ in its denominator."
+    },
+    {
+      "id": "q9.4",
+      "question": "In Erdős's 1932 proof of Bertrand's postulate, what is the threshold $n$ above which the central binomial upper/lower bound inequality fails?",
+      "options": [
+        { "id": "a", "text": "$n \\ge 100$" },
+        { "id": "b", "text": "$n \\ge 256$" },
+        { "id": "c", "text": "$n \\ge 468$" },
+        { "id": "d", "text": "$n \\ge 1000$" }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Taking logarithms of $4^{n/3} \\le (2n+1)(2n)^{\\sqrt{2n}}$ gives a contradiction for every $n \\ge 468$, leaving $n \\le 467$ to be bridged by the prime chain $2,3,5,7,13,23,43,83,163,317,631$."
+    }
+  ]
+}

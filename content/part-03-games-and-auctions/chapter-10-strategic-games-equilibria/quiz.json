@@ -1,0 +1,54 @@
+{
+  "chapterId": "chapter-10",
+  "title": "Chapter 10 Quiz — Strategic Games & Betting",
+  "questions": [
+    {
+      "id": "q10.1",
+      "question": "For the zero-sum matrix with rows $(3, -1)$ and $(-2, 1)$, what is the value $v$ of the game?",
+      "options": [
+        { "id": "a", "text": "$0$" },
+        { "id": "b", "text": "$1/7$" },
+        { "id": "c", "text": "$2/7$" },
+        { "id": "d", "text": "$3/7$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "$v = (ad - bc)/(a - b - c + d) = (3\\cdot 1 - (-1)(-2))/(3 + 1 + 2 + 1) = 1/7$."
+    },
+    {
+      "id": "q10.2",
+      "question": "In the poker betting model with pot $P = 100$, if the bettor makes a half-pot bet $S = 50$, what is the equilibrium bluff fraction $\\alpha$ among all bets and minimum defense frequency $c$?",
+      "options": [
+        { "id": "a", "text": "$\\alpha = 1/3,\\; c = 1/2$" },
+        { "id": "b", "text": "$\\alpha = 1/4,\\; c = 2/3$" },
+        { "id": "c", "text": "$\\alpha = 1/2,\\; c = 1/3$" },
+        { "id": "d", "text": "$\\alpha = 1/5,\\; c = 3/4$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "$\\alpha = 50/(100 + 100) = 1/4$ and $c = 100/(100 + 50) = 2/3$."
+    },
+    {
+      "id": "q10.3",
+      "question": "In the weighted voting game $[3;\\; 2, 1, 1]$ for players $A, B, C$, what is player $A$'s Banzhaf index?",
+      "options": [
+        { "id": "a", "text": "$1/2$" },
+        { "id": "b", "text": "$3/5$" },
+        { "id": "c", "text": "$2/3$" },
+        { "id": "d", "text": "$3/4$" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "$A$ is critical in all $3$ winning coalitions ($\\{A,B\\}, \\{A,C\\}, \\{A,B,C\\}$), while $B$ and $C$ are critical once each ($1 + 1 + 3 = 5$ total critical appearances), giving $3/5$."
+    },
+    {
+      "id": "q10.4",
+      "question": "In a mixed Nash equilibrium, what determines player 1's randomization probabilities?",
+      "options": [
+        { "id": "a", "text": "Equalizing player 1's own expected payoffs across pure strategies" },
+        { "id": "b", "text": "Making player 2 indifferent among the pure strategies player 2 mixes" },
+        { "id": "c", "text": "Maximizing the trace of the payoff matrix" },
+        { "id": "d", "text": "Selecting the uniform distribution always" }
+      ],
+      "correctOptionId": "b",
+      "explanation": "By the indifference principle, each player chooses their mix so that the opponent cannot gain by shifting probability among their active strategies."
+    }
+  ]
+}

@@ -1,0 +1,722 @@
+{
+  "parts": [
+    {
+      "id": "part-00",
+      "number": 0,
+      "title": "Cross-Cutting Toolkit & Exam Blueprint",
+      "subtitle": "Recurring Mathematical Engines & Inter-IIT Syllabus",
+      "description": "Symmetry groups, linearity of expectation and variance, classical inequalities, matrix powers and Rayleigh quotients, growth rates, proof checklist, and the Inter-IIT Math Bowl blueprint.",
+      "slug": "toolkit-and-reference",
+      "chapters": [
+        {
+          "id": "chapter-00",
+          "number": "0",
+          "title": "Cross-Cutting Toolkit & Exam Blueprint",
+          "slug": "toolkit-reference",
+          "description": "The five recurring mathematical engines plus the Inter-IIT / Math Bowl syllabus map derived from the 2023 and 2024 papers.",
+          "estimatedHours": "1.5h",
+          "difficulty": "intermediate",
+          "prerequisites": [],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "0.1",
+              "partId": "part-00",
+              "chapterId": "chapter-00",
+              "title": "Symmetry Groups & Orbit-Stabilizer Theorem",
+              "slug": "symmetry-groups-orbit-stabilizer",
+              "file": "0.1-symmetry-groups-orbit-stabilizer.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 20,
+              "tags": ["groups", "permutations", "orbit-stabilizer", "lagrange", "symmetry"],
+              "status": "published"
+            },
+            {
+              "id": "0.2",
+              "partId": "part-00",
+              "chapterId": "chapter-00",
+              "title": "Probability, Inequalities, Matrices & Growth Rates",
+              "slug": "probability-inequalities-matrices",
+              "file": "0.2-probability-inequalities-matrices.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 30,
+              "tags": ["expectation", "variance", "order-statistics", "cauchy-schwarz", "jensen", "rayleigh", "stirling"],
+              "status": "published"
+            },
+            {
+              "id": "0.3",
+              "partId": "part-00",
+              "chapterId": "chapter-00",
+              "title": "Proof Checklist & Inter-IIT Math Bowl Blueprint",
+              "slug": "proof-checklist-and-past-paper",
+              "file": "0.3-proof-checklist-and-past-paper.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 25,
+              "tags": ["proof-writing", "inter-iit", "math-bowl", "syllabus", "past-paper"],
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part-01",
+      "number": 1,
+      "title": "Discrete Mathematics",
+      "subtitle": "Graphs, Bijections, Homomorphisms, Symmetry, Ramsey, Metrics & Optimization",
+      "description": "Sections 1 to 8: graph foundations, Hamiltonian cycles, bijective proofs, tree homomorphisms, hypergraphs, coloring and Ramsey theory, metric spaces, and multivariable optimization.",
+      "slug": "discrete-mathematics",
+      "chapters": [
+        {
+          "id": "chapter-01",
+          "number": "1",
+          "title": "Graph Theory Foundations",
+          "slug": "graph-theory-foundations",
+          "description": "Vocabulary and the eight core theorems: handshake lemma, Kőnig bipartiteness, trees, Jordan center, Euler trails, Hall, Mantel/Turán, and planar graphs.",
+          "estimatedHours": "1.5h",
+          "difficulty": "intermediate",
+          "prerequisites": ["chapter-00"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "1.1",
+              "partId": "part-01",
+              "chapterId": "chapter-01",
+              "title": "Graph Vocabulary, Trees, Bipartiteness & Euler Trails",
+              "slug": "graph-vocabulary-trees-euler",
+              "file": "1.1-graph-vocabulary-trees-euler.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 25,
+              "tags": ["graphs", "handshake", "bipartite", "trees", "jordan-center", "euler-trail"],
+              "status": "published"
+            },
+            {
+              "id": "1.2",
+              "partId": "part-01",
+              "chapterId": "chapter-01",
+              "title": "Hall's Matching, Mantel's Theorem & Planarity",
+              "slug": "hall-mantel-planarity",
+              "file": "1.2-hall-mantel-planarity.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 25,
+              "tags": ["hall-matching", "mantel", "turan", "planar", "euler-formula"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-02",
+          "number": "2",
+          "title": "Hamiltonian Paths and Cycles",
+          "slug": "hamiltonian-paths-cycles",
+          "description": "Three obstructions, Ore and Dirac theorems, Rédei's tournament theorem, Gray codes, and standard graph families.",
+          "estimatedHours": "1.0h",
+          "difficulty": "intermediate",
+          "prerequisites": ["chapter-01"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "2.1",
+              "partId": "part-01",
+              "chapterId": "chapter-02",
+              "title": "Obstructions, Ore & Dirac Theorems, Rédei & Gray Codes",
+              "slug": "hamiltonian-obstructions-theorems",
+              "file": "2.1-hamiltonian-obstructions-theorems.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 35,
+              "tags": ["hamiltonian", "ore", "dirac", "redei", "gray-code", "knight-tour"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-03",
+          "number": "3",
+          "title": "Bijective Proofs and Double Counting",
+          "slug": "bijective-proofs-double-counting",
+          "description": "Bijections, reflection principle for Catalan numbers and ballot theorem, Prüfer codes, Cayley's formula, matrix-tree theorem, and Glaisher's partition bijection.",
+          "estimatedHours": "1.5h",
+          "difficulty": "intermediate",
+          "prerequisites": ["chapter-01"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "3.1",
+              "partId": "part-01",
+              "chapterId": "chapter-03",
+              "title": "Bijections, Catalan Numbers & Double Counting",
+              "slug": "bijections-catalan-double-counting",
+              "file": "3.1-bijections-catalan-double-counting.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 30,
+              "tags": ["bijection", "catalan", "reflection-principle", "ballot-theorem", "stars-and-bars"],
+              "status": "published"
+            },
+            {
+              "id": "3.2",
+              "partId": "part-01",
+              "chapterId": "chapter-03",
+              "title": "Prüfer Codes, Spanning Trees & Integer Partitions",
+              "slug": "prufer-codes-partitions",
+              "file": "3.2-prufer-codes-partitions.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 30,
+              "tags": ["prufer", "cayley", "matrix-tree", "partitions", "glaisher"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-04",
+          "number": "4",
+          "title": "Graph Homomorphisms, with Trees",
+          "slug": "graph-homomorphisms-trees",
+          "description": "Edge-preserving maps unifying graph coloring, walk counting, odd cycles, cores, bottom-up tree dynamic programming, and tree automorphisms.",
+          "estimatedHours": "1.0h",
+          "difficulty": "advanced",
+          "prerequisites": ["chapter-01", "chapter-03"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "4.1",
+              "partId": "part-01",
+              "chapterId": "chapter-04",
+              "title": "Homomorphisms, Tree DP & Tree Automorphisms",
+              "slug": "homomorphisms-tree-dp-automorphisms",
+              "file": "4.1-homomorphisms-tree-dp-automorphisms.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 35,
+              "tags": ["homomorphism", "tree-dp", "odd-cycles", "automorphisms", "blakley-roy"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-05",
+          "number": "5",
+          "title": "Hypergraphs, Automorphisms & Symmetry Counting",
+          "slug": "hypergraphs-automorphisms-symmetry",
+          "description": "Hypergraphs, Fano and affine planes, computing automorphism groups via orbit-stabilizer, Burnside's lemma, and Pólya enumeration for necklaces, bracelets, and cubes.",
+          "estimatedHours": "1.0h",
+          "difficulty": "advanced",
+          "prerequisites": ["chapter-00", "chapter-04"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "5.1",
+              "partId": "part-01",
+              "chapterId": "chapter-05",
+              "title": "Hypergraphs, Orbit-Stabilizer & Burnside-Pólya Counting",
+              "slug": "hypergraphs-burnside-polya",
+              "file": "5.1-hypergraphs-burnside-polya.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 35,
+              "tags": ["hypergraph", "fano-plane", "burnside", "polya", "necklaces", "bracelets"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-06",
+          "number": "6",
+          "title": "Coloring Arguments and Ramsey Theory",
+          "slug": "coloring-arguments-ramsey-theory",
+          "description": "Board coloring invariants, roots-of-unity proofs, graph coloring bounds, Ramsey numbers, Erdős lower bound, Goodman's bound, Schur, Van der Waerden, and Erdős-Szekeres.",
+          "estimatedHours": "1.5h",
+          "difficulty": "advanced",
+          "prerequisites": ["chapter-00", "chapter-01"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "6.1",
+              "partId": "part-01",
+              "chapterId": "chapter-06",
+              "title": "Coloring Invariants, Roots of Unity & Graph Coloring",
+              "slug": "coloring-invariants-graph-coloring",
+              "file": "6.1-coloring-invariants-graph-coloring.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 25,
+              "tags": ["tiling", "roots-of-unity", "de-bruijn-klarner", "chromatic-number", "moser-spindle"],
+              "status": "published"
+            },
+            {
+              "id": "6.2",
+              "partId": "part-01",
+              "chapterId": "chapter-06",
+              "title": "Ramsey Numbers, Probabilistic Bounds & Arithmetic Ramsey",
+              "slug": "ramsey-theory-arithmetic",
+              "file": "6.2-ramsey-theory-arithmetic.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 35,
+              "tags": ["ramsey", "goodman", "schur", "van-der-waerden", "erdos-szekeres", "paley"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-07",
+          "number": "7",
+          "title": "Metric Spaces",
+          "slug": "metric-spaces",
+          "description": "Metric axioms, Lp norms, ultrametrics and p-adic distance, Buneman's four-point tree metrics, Ptolemy's inequality, Hamming balls, and octahedral l1 lattice balls.",
+          "estimatedHours": "1.0h",
+          "difficulty": "advanced",
+          "prerequisites": ["chapter-01"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "7.1",
+              "partId": "part-01",
+              "chapterId": "chapter-07",
+              "title": "Metric Axioms, Ultrametrics, Tree Metrics & Packing",
+              "slug": "metric-spaces-ultrametrics-packing",
+              "file": "7.1-metric-spaces-ultrametrics-packing.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 35,
+              "tags": ["metric-space", "ultrametric", "p-adic", "tree-metric", "hamming-bound", "ptolemy"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-08",
+          "number": "8",
+          "title": "Partial Derivatives and Multivariable Optimization",
+          "slug": "partial-derivatives-optimization",
+          "description": "Gradients, Hessians, Sylvester's criterion, convexity, Lagrange multipliers, sensitivity, and the Envelope theorem.",
+          "estimatedHours": "1.0h",
+          "difficulty": "intermediate",
+          "prerequisites": ["chapter-00"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "8.1",
+              "partId": "part-01",
+              "chapterId": "chapter-08",
+              "title": "Gradients, Hessians, Lagrange Multipliers & Envelope Theorem",
+              "slug": "multivariable-optimization-lagrange",
+              "file": "8.1-multivariable-optimization-lagrange.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 30,
+              "tags": ["gradient", "hessian", "sylvester", "lagrange-multipliers", "envelope-theorem", "convexity"],
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part-02",
+      "number": 2,
+      "title": "Number Theory",
+      "subtitle": "Prime Distributions & Valuation Bookkeeping",
+      "description": "Section 9: Legendre's formula, Kummer's theorem, Erdős's proof of Bertrand's postulate, upper/lower bounds on π(x) and p_n, and classic applications.",
+      "slug": "number-theory",
+      "chapters": [
+        {
+          "id": "chapter-09",
+          "number": "9",
+          "title": "Bounds on Primes and Bertrand's Postulate",
+          "slug": "primes-bertrands-postulate",
+          "description": "Prime-power bookkeeping in C(2n, n), Erdős's 1932 proof of Bertrand's postulate, bounds on π(x) and p_n, Nair's LCM bound, and five classic applications.",
+          "estimatedHours": "1.0h",
+          "difficulty": "advanced",
+          "prerequisites": ["chapter-00"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "9.1",
+              "partId": "part-02",
+              "chapterId": "chapter-09",
+              "title": "Legendre, Kummer, Erdős's Proof of Bertrand & Prime Bounds",
+              "slug": "primes-bertrand-postulate",
+              "file": "9.1-primes-bertrand-postulate.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 35,
+              "tags": ["legendre", "kummer", "bertrand", "primorial", "pnt", "sylvester-schur"],
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part-03",
+      "number": 3,
+      "title": "Games and Auctions",
+      "subtitle": "Equilibria, Cyclic Games, Richman Bidding & Mechanism Design",
+      "description": "Sections 10 to 12: strategic equilibria, minimax, cyclic dominance, Shapley-Shubik & Banzhaf voting power, loopy and mean-payoff games, Richman bidding, chip parity, and auctions.",
+      "slug": "games-and-auctions",
+      "chapters": [
+        {
+          "id": "chapter-10",
+          "number": "10",
+          "title": "Strategic Games, Zero-Sum, Cyclic Dominance & Betting",
+          "slug": "strategic-games-equilibria",
+          "description": "Iterated dominance, Nash equilibria via indifference, minimax and 2x2 closed form, cyclic dominance on Z_{2k+1}, poker betting, and voting power indices.",
+          "estimatedHours": "1.0h",
+          "difficulty": "intermediate",
+          "prerequisites": ["chapter-00"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "10.1",
+              "partId": "part-03",
+              "chapterId": "chapter-10",
+              "title": "Nash Equilibria, Minimax, Poker Bluffing & Voting Power",
+              "slug": "strategic-games-poker-voting",
+              "file": "10.1-strategic-games-poker-voting.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 35,
+              "tags": ["nash", "minimax", "indifference", "poker", "shapley-shubik", "banzhaf"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-11",
+          "number": "11",
+          "title": "Games with Cycles: Loopy, Cycle & Mean-Payoff",
+          "slug": "games-with-cycles",
+          "description": "Sprague-Grundy recap, retrograde W/L/D fixed-point analysis for loopy games, mirror strategy on cycles, and Ehrenfeucht-Mycielski mean-payoff games.",
+          "estimatedHours": "1.0h",
+          "difficulty": "advanced",
+          "prerequisites": ["chapter-01", "chapter-10"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "11.1",
+              "partId": "part-03",
+              "chapterId": "chapter-11",
+              "title": "Loopy Retrograde Analysis, Cycle Mirroring & Mean-Payoff Games",
+              "slug": "loopy-cycle-mean-payoff-games",
+              "file": "11.1-loopy-cycle-mean-payoff-games.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 30,
+              "tags": ["sprague-grundy", "retrograde-analysis", "loopy-games", "mean-payoff", "mirror-strategy"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-12",
+          "number": "12",
+          "title": "Bidding Games and Auction Pricing",
+          "slug": "bidding-games-auctions",
+          "description": "Richman bidding thresholds, whole-chip parity with a tie-break token, modular raise ladders, sealed-bid auctions, revenue equivalence, and the winner's curse.",
+          "estimatedHours": "1.5h",
+          "difficulty": "advanced",
+          "prerequisites": ["chapter-00", "chapter-08", "chapter-10"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "12.1",
+              "partId": "part-03",
+              "chapterId": "chapter-12",
+              "title": "Richman Bidding, Whole-Chip Parity & Raise Ladders",
+              "slug": "richman-bidding-chip-parity",
+              "file": "12.1-richman-bidding-chip-parity.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 30,
+              "tags": ["richman", "bidding-games", "tie-break-token", "raise-ladder"],
+              "status": "published"
+            },
+            {
+              "id": "12.2",
+              "partId": "part-03",
+              "chapterId": "chapter-12",
+              "title": "Sealed-Bid Auctions, Revenue Equivalence & Winner's Curse",
+              "slug": "auctions-revenue-equivalence",
+              "file": "12.2-auctions-revenue-equivalence.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 30,
+              "tags": ["vickrey", "first-price", "all-pay", "revenue-equivalence", "winners-curse"],
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part-04",
+      "number": 4,
+      "title": "Geometry",
+      "subtitle": "Euclidean Toolkit, Ptolemy, 3D Polyhedra, Three-Point Problems & Packing",
+      "description": "Sections 13 to 16: classical triangle and circle tools, Ptolemy's theorem, 3D vectors and lattice geometry, five three-point problems, and sphere/octahedron packings.",
+      "slug": "geometry",
+      "chapters": [
+        {
+          "id": "chapter-13",
+          "number": "13",
+          "title": "Euclidean Geometry Toolkit and Ptolemy's Theorem",
+          "slug": "euclidean-toolkit-ptolemy",
+          "description": "Triangle centers, Euler's formula, Stewart, Ceva, Menelaus, circle power and radical axes, and both complex and synthetic proofs of Ptolemy's theorem.",
+          "estimatedHours": "1.0h",
+          "difficulty": "intermediate",
+          "prerequisites": ["chapter-07"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "13.1",
+              "partId": "part-04",
+              "chapterId": "chapter-13",
+              "title": "Triangle Toolkit, Circle Power & Ptolemy's Theorem",
+              "slug": "euclidean-toolkit-ptolemy",
+              "file": "13.1-euclidean-toolkit-ptolemy.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 35,
+              "tags": ["ptolemy", "ceva", "menelaus", "power-of-point", "euler-line", "pompeiu"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-14",
+          "number": "14",
+          "title": "Coordinates, Vectors, 3D, Lattice Geometry & Polyhedra",
+          "slug": "vectors-3d-lattice-polyhedra",
+          "description": "Dot/cross/triple products, shoelace, De Gua's theorem, Pick's lattice theorem, Descartes's angular defect, and classification of Platonic solids.",
+          "estimatedHours": "1.0h",
+          "difficulty": "intermediate",
+          "prerequisites": ["chapter-13"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "14.1",
+              "partId": "part-04",
+              "chapterId": "chapter-14",
+              "title": "Vectors, Planes, Pick's Theorem & Platonic Polyhedra",
+              "slug": "vectors-lattice-polyhedra",
+              "file": "14.1-vectors-lattice-polyhedra.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 35,
+              "tags": ["vectors", "de-gua", "picks-theorem", "platonic-solids", "descartes"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-15",
+          "number": "15",
+          "title": "Three-Point Problems",
+          "slug": "three-point-problems",
+          "description": "Circle through 3 points, borehole dip and strike plane, Fermat point rotation proof, Snellius-Pothenot resection, and acute random circle triangles.",
+          "estimatedHours": "1.0h",
+          "difficulty": "intermediate",
+          "prerequisites": ["chapter-13", "chapter-14"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "15.1",
+              "partId": "part-04",
+              "chapterId": "chapter-15",
+              "title": "Five Classic Three-Point Problems",
+              "slug": "five-three-point-problems",
+              "file": "15.1-five-three-point-problems.md",
+              "difficulty": "intermediate",
+              "estimatedMinutes": 30,
+              "tags": ["fermat-point", "resection", "snellius-pothenot", "random-triangle", "geologist-plane"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-16",
+          "number": "16",
+          "title": "Packing and Packing Efficiency",
+          "slug": "packing-efficiency",
+          "description": "Unit-cell counting for SC, BCC, FCC, and HCP sphere packings, interstitial voids, tetrahedral-octahedral honeycomb, Minkowski's 18/19, and rock salt ratio.",
+          "estimatedHours": "1.0h",
+          "difficulty": "advanced",
+          "prerequisites": ["chapter-07", "chapter-14"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "16.1",
+              "partId": "part-04",
+              "chapterId": "chapter-16",
+              "title": "Sphere Packings, Voids, Honeycombs & Octahedra",
+              "slug": "packing-efficiency-voids",
+              "file": "16.1-packing-efficiency-voids.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 35,
+              "tags": ["packing", "fcc", "bcc", "octahedral-void", "honeycomb", "rock-salt"],
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part-05",
+      "number": 5,
+      "title": "How It All Connects",
+      "subtitle": "Pure Mathematics Cross-Topic Bridges",
+      "description": "Cross-topic bridges linking combinatorics, number theory, geometry, optimization, and game theory (RL/ML track omitted for Inter-IIT).",
+      "slug": "how-it-all-connects",
+      "chapters": [
+        {
+          "id": "chapter-17",
+          "number": "17",
+          "title": "Bridges Between Pure Math Topics",
+          "slug": "bridges-between-topics",
+          "description": "Synthesis of the pure-math bridges across combinatorics, metric spaces, primes, geometry, optimization, and games.",
+          "estimatedHours": "0.8h",
+          "difficulty": "research",
+          "prerequisites": ["chapter-06", "chapter-09", "chapter-12", "chapter-16"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "17.1",
+              "partId": "part-05",
+              "chapterId": "chapter-17",
+              "title": "Cross-Topic Mathematical Bridges (Guide §20)",
+              "slug": "cross-topic-bridges",
+              "file": "17.1-cross-topic-bridges.md",
+              "difficulty": "research",
+              "estimatedMinutes": 25,
+              "tags": ["bridges", "synthesis", "connections", "inter-iit"],
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part-06",
+      "number": 6,
+      "title": "Inter-IIT & Math Bowl Reference Papers",
+      "subtitle": "2024 Screening Test (18 Problems) & CMI 2023 Solutions (5 Problems)",
+      "description": "Complete worked solutions, proof strategies, and Python verifications for the uploaded Math Bowl 2024 Screening Test and CMI Inter-IIT 2023 Competition.",
+      "slug": "reference-papers",
+      "chapters": [
+        {
+          "id": "chapter-18",
+          "number": "18",
+          "title": "Math Bowl 2024 Screening Test (18 Problems)",
+          "slug": "math-bowl-2024-screening",
+          "description": "All 18 screening test problems from 10-11-2024 organized by Algebra/Analysis, Linear Algebra/Combinatorics/Probability, and Number Theory/Geometry.",
+          "estimatedHours": "2.5h",
+          "difficulty": "advanced",
+          "prerequisites": ["chapter-01", "chapter-08", "chapter-09"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "18.1",
+              "partId": "part-06",
+              "chapterId": "chapter-18",
+              "title": "Inequalities, Analysis, Recurrences & Functional Equations (P1, P4, P9–11)",
+              "slug": "screening-algebra-analysis",
+              "file": "18.1-screening-algebra-analysis.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 35,
+              "tags": ["math-bowl-2024", "inequalities", "functional-equations", "egf", "cauchy-schwarz"],
+              "status": "published"
+            },
+            {
+              "id": "18.2",
+              "partId": "part-06",
+              "chapterId": "chapter-18",
+              "title": "Linear Algebra, Graphs & Probability (P3, P5–P7, P15, P17–18)",
+              "slug": "screening-linalg-comb-prob",
+              "file": "18.2-screening-linalg-comb-prob.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 45,
+              "tags": ["math-bowl-2024", "matrices", "commutator", "increasing-path", "variance", "markov-chain"],
+              "status": "published"
+            },
+            {
+              "id": "18.3",
+              "partId": "part-06",
+              "chapterId": "chapter-18",
+              "title": "Number Theory & Circle Geometry (P2, P8, P12–14, P16)",
+              "slug": "screening-number-theory-geometry",
+              "file": "18.3-screening-number-theory-geometry.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 40,
+              "tags": ["math-bowl-2024", "totient", "harmonic-sum", "lcm", "modular-product", "circle-geometry"],
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "id": "chapter-19",
+          "number": "19",
+          "title": "CMI Inter-IIT Math Bowl 2023 (Problems & Solutions)",
+          "slug": "cmi-inter-iit-2023",
+          "description": "All 5 Olympiad problems from the CMI Inter-IIT Tech Fest Mathematical Competition 2023 with detailed derivations.",
+          "estimatedHours": "1.5h",
+          "difficulty": "research",
+          "prerequisites": ["chapter-01", "chapter-09", "chapter-18"],
+          "hasSummary": true,
+          "hasQuiz": true,
+          "hasProject": false,
+          "lessons": [
+            {
+              "id": "19.1",
+              "partId": "part-06",
+              "chapterId": "chapter-19",
+              "title": "Symmetric Eigenvalues, Cauchy–Schwarz & Cardinality (CMI P1–P3)",
+              "slug": "cmi-eigenvalues-inequality-cardinality",
+              "file": "19.1-cmi-eigenvalues-inequality-cardinality.md",
+              "difficulty": "research",
+              "estimatedMinutes": 30,
+              "tags": ["inter-iit-2023", "eigenvalues", "rayleigh-quotient", "cauchy-schwarz", "cardinality"],
+              "status": "published"
+            },
+            {
+              "id": "19.2",
+              "partId": "part-06",
+              "chapterId": "chapter-19",
+              "title": "Hall's Monochromatic Trees & Deficient Sumsets (CMI P4–P5)",
+              "slug": "cmi-hall-trees-deficient-sumsets",
+              "file": "19.2-cmi-hall-trees-deficient-sumsets.md",
+              "difficulty": "research",
+              "estimatedMinutes": 35,
+              "tags": ["inter-iit-2023", "hall-theorem", "chromatic-number", "divisor-sum", "primes"],
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
