@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { CheckCircle2, Bookmark, ChevronLeft, ChevronRight, Share2, Check, FileText } from 'lucide-react';
+import { CheckCircle2, Bookmark, ChevronLeft, ChevronRight, Share2, Check, FileText, RotateCcw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface FloatingDockProps {
   lessonId: string;
   isCompleted: boolean;
   isBookmarked: boolean;
+  isQueuedForReview?: boolean;
   onToggleComplete: () => void;
   onToggleBookmark: () => void;
+  onToggleReview?: () => void;
   onOpenNotes: () => void;
   prevLesson?: { id: string; title: string } | null;
   nextLesson?: { id: string; title: string } | null;
@@ -17,8 +19,10 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({
   lessonId,
   isCompleted,
   isBookmarked,
+  isQueuedForReview = false,
   onToggleComplete,
   onToggleBookmark,
+  onToggleReview,
   onOpenNotes,
   prevLesson,
   nextLesson
@@ -76,6 +80,21 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({
       >
         <Bookmark className={`w-4 h-4 ${isBookmarked ? 'fill-amber-400' : ''}`} />
       </button>
+
+      {/* Spaced Re-Solve Queue Button */}
+      {onToggleReview && (
+        <button
+          onClick={onToggleReview}
+          className={`p-2 rounded-full transition ${
+            isQueuedForReview
+              ? 'text-cyan-300 bg-cyan-500/20 border border-cyan-500/30'
+              : 'text-slate-400 hover:text-white hover:bg-slate-800'
+          }`}
+          title={isQueuedForReview ? 'In 3-Day Blind Re-Solve Queue (click to remove)' : 'Queue for Blind Re-Solve (+3d)'}
+        >
+          <RotateCcw className="w-4 h-4" />
+        </button>
+      )}
 
       {/* Notes Button */}
       <button

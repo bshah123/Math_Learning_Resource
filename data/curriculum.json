@@ -56,6 +56,18 @@
               "estimatedMinutes": 25,
               "tags": ["proof-writing", "inter-iit", "math-bowl", "syllabus", "past-paper"],
               "status": "published"
+            },
+            {
+              "id": "0.4",
+              "partId": "part-00",
+              "chapterId": "chapter-00",
+              "title": "Bridge Primer: Schur Triangularization, Finite Fields & Martingales",
+              "slug": "algebra-martingale-primer",
+              "file": "0.4-algebra-martingale-primer.md",
+              "difficulty": "advanced",
+              "estimatedMinutes": 25,
+              "tags": ["schur", "cayley-hamilton", "finite-fields", "quadratic-reciprocity", "martingale"],
+              "status": "published"
             }
           ]
         }

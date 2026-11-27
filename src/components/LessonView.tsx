@@ -21,6 +21,7 @@ import {
   getStoredProgress,
   toggleLessonCompleted,
   toggleBookmark,
+  toggleReviewQueue,
   updateLastVisited
 } from '../utils/storage';
 import { QuizComponent } from './QuizComponent';
@@ -123,6 +124,7 @@ export const LessonView: React.FC<LessonViewProps> = ({ readingMode }) => {
 
   const isCompleted = progress.completedLessons.includes(lessonId);
   const isBookmarked = progress.bookmarkedLessons.includes(lessonId);
+  const isQueuedForReview = Boolean(progress.reviewQueue && progress.reviewQueue[lessonId]);
 
   const handleToggleComplete = () => {
     setProgress(toggleLessonCompleted(lessonId));
@@ -130,6 +132,10 @@ export const LessonView: React.FC<LessonViewProps> = ({ readingMode }) => {
 
   const handleToggleBookmark = () => {
     setProgress(toggleBookmark(lessonId));
+  };
+
+  const handleToggleReview = () => {
+    setProgress(toggleReviewQueue(lessonId, 3));
   };
 
   const renderMarkdownBody = (rawBody: string) => {
@@ -279,11 +285,16 @@ export const LessonView: React.FC<LessonViewProps> = ({ readingMode }) => {
           }
           i++;
         }
+        const isHint = /^hint/i.test(summaryText.trim());
         elements.push(
-          <details key={`details-${i}`} className="wpsolution-container group my-3">
+          <details key={`details-${i}`} className={`wpsolution-container group my-3 ${isHint ? 'wpsolution-hint' : ''}`}>
             <summary className="wpsolution-summary">
               <span className="flex items-center gap-2">
-                <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
+                {isHint ? (
+                  <Lightbulb className="w-3.5 h-3.5 text-amber-500" />
+                ) : (
+                  <Sparkles className="w-3.5 h-3.5 text-indigo-500" />
+                )}
                 <span>{summaryText}</span>
               </span>
               <ChevronRight className="w-4 h-4 text-slate-400 group-open:rotate-90 transition-transform duration-200" />
@@ -593,8 +604,10 @@ export const LessonView: React.FC<LessonViewProps> = ({ readingMode }) => {
         lessonId={lessonId}
         isCompleted={isCompleted}
         isBookmarked={isBookmarked}
+        isQueuedForReview={isQueuedForReview}
         onToggleComplete={handleToggleComplete}
         onToggleBookmark={handleToggleBookmark}
+        onToggleReview={handleToggleReview}
         onOpenNotes={() => setIsNotesOpen(true)}
         prevLesson={prevItem ? { id: prevItem.lesson.id, title: prevItem.lesson.title } : null}
         nextLesson={nextItem ? { id: nextItem.lesson.id, title: nextItem.lesson.title } : null}

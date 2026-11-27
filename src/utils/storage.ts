@@ -11,6 +11,7 @@ const defaultProgress: UserProgress = {
   bookmarkedLessons: [],
   completedChecks: {},
   notes: {},
+  reviewQueue: {},
   lastVisitedLessonId: '0.1'
 };
 
@@ -80,6 +81,28 @@ export function saveLessonNote(lessonId: string, noteText: string): UserProgress
 export function updateLastVisited(lessonId: string): void {
   const current = getStoredProgress();
   saveStoredProgress({ ...current, lastVisitedLessonId: lessonId });
+}
+
+export function toggleReviewQueue(lessonId: string, daysFromNow = 3): UserProgress {
+  const current = getStoredProgress();
+  const queue = { ...(current.reviewQueue || {}) };
+  if (queue[lessonId]) {
+    delete queue[lessonId];
+  } else {
+    queue[lessonId] = Date.now() + daysFromNow * 24 * 60 * 60 * 1000;
+  }
+  const newProgress = { ...current, reviewQueue: queue };
+  saveStoredProgress(newProgress);
+  return newProgress;
+}
+
+export function markReviewCompleted(lessonId: string, nextDays = 7): UserProgress {
+  const current = getStoredProgress();
+  const queue = { ...(current.reviewQueue || {}) };
+  queue[lessonId] = Date.now() + nextDays * 24 * 60 * 60 * 1000;
+  const newProgress = { ...current, reviewQueue: queue };
+  saveStoredProgress(newProgress);
+  return newProgress;
 }
 
 export function getStoredTheme(): 'light' | 'dark' | 'system' {

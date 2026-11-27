@@ -101,6 +101,7 @@ export interface UserProgress {
   bookmarkedLessons: string[]; // lesson IDs
   completedChecks: Record<string, string[]>; // chapterId -> check IDs
   notes: Record<string, string>; // lessonId -> note text
+  reviewQueue?: Record<string, number>; // lessonId -> due timestamp (ms)
   lastVisitedLessonId?: string;
 }
 
